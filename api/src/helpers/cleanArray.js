@@ -16,6 +16,7 @@ const cleanArray = (array) =>{
       genres: genresMap,
       platforms: plataformsMap,
       rating: elem.rating,
+      released: elem.released,
       created: false,
     }
   });
