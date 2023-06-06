@@ -11,6 +11,7 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     description: {
       type: DataTypes.TEXT,
@@ -23,6 +24,9 @@ module.exports = (sequelize) => {
     background_image: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isUrl: true,
+      },
     },
     released: {
       type: DataTypes.STRING,
