@@ -1,0 +1,16 @@
+.container {
+  padding: 1rem;
+  border: 10px solid #582626;
+  background-color: #FFF;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text{
+  font-size: 1.2rem;
+  color: #666;
+}
