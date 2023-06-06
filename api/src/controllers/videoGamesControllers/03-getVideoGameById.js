@@ -13,10 +13,13 @@ const getVideogameByIdApi = async (id) => {
   return videoGameInfo;
 };
 const getVideogameByIdBDD = async (id) => {
-  const videogameBDD = await findByPk(id,{
+  const videogameBDD = await Videogame.findByPk(id,{
     include:{
       model: Genre,
       attributes: ['name'],
+      through:{
+        attributes: [], //No quiero valores de la tabla intermedia
+      }
     }
   });
   if(!videogameBDD) throw Error (`No se encontró el videojuego en la base de datos de id ${id}`);
