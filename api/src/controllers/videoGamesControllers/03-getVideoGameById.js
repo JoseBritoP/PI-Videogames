@@ -1,13 +1,14 @@
 const { Videogame,Genre} = require('../../db');
 const axios = require('axios');
 const {APIGames, API_KEY} = process.env;
-const cleanArrayById = require('../../helpers/cleanArrayById');
+const cleanArrayDetail = require('../../helpers/cleanArrayDetail');
+const cleanArrayDetailBDD = require('../../helpers/cleanArrayDetailBDD')
 
 const getVideogameByIdApi = async (id) => {
   //Hacemos l
   const videoGameApiRaw = (await axios.get(`${APIGames}/${id}?key=${API_KEY}`)).data
   // console.log(videoGameApiRaw)
-  const videoGameInfo = cleanArrayById([videoGameApiRaw]);
+  const videoGameInfo = cleanArrayDetail([videoGameApiRaw]);
   // console.log(videoGameInfo)
   if(!videoGameInfo) throw Error (`No se encontró el videojuego en la API de id ${id}`);
   return videoGameInfo;
@@ -23,7 +24,8 @@ const getVideogameByIdBDD = async (id) => {
     }
   });
   if(!videogameBDD) throw Error (`No se encontró el videojuego en la base de datos de id ${id}`);
-  return videogameBDD;
+  const videogameBDDFormat = cleanArrayDetailBDD(videogameBDD)
+  return videogameBDDFormat;
 };
 
 module.exports = {
