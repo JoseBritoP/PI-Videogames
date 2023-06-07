@@ -1,4 +1,4 @@
-const cleanArrayById = (array) =>{
+const cleanArrayDetail = (array) =>{
   return array.map((game)=>{
     const genresMap = game.genres?.map((genre) => {
       return { name : genre.name };
@@ -24,5 +24,4 @@ const cleanArrayById = (array) =>{
   });
 };
 
-module.exports = cleanArrayById;
-
+module.exports = cleanArrayDetail;
