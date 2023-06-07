@@ -1,4 +1,5 @@
 const { Videogame,Genre} = require('../../db');
+const cleanArray = require('../../helpers/cleanArray');
 const getAllVideoGames = require('./01-getAllVideoGames')
 const {getVideogameByIdApi,getVideogameByIdBDD} = require('./03-getVideoGameById');
 
@@ -16,17 +17,20 @@ const deleteAVideoGameBDD = async (id) => {
 };
 
 const deleteAVideoGameAPI = async (id) => {
-  // Identificamos el videojuego a eliminar:
+  //* Identificamos el videojuego a eliminar:
   const videogameDeletedAPI = await getVideogameByIdApi(id);
   if(!videogameDeletedAPI)  throw Error (`No se encontró el videojuego a eliminar de id: ${id}`)
-  // Realizamos una petición de todos los videojuegos:
+  
+  // * Filtramos de toda la info que trae el detail a la info básica de la api 
+  const videoGameDeletedApiArray = cleanArray(videogameDeletedAPI);
+
+  //* Realizamos una petición de todos los videojuegos para filtrar y traer los elementos que no coincidan con el id:
   const allVideoGames = await getAllVideoGames();
   const videogamesFiltered = allVideoGames.filter((games) => games.id !== +id);
-
   // const videogamesFiltered = allVideoGames.filter((game)=>game.id !== +id)
   // return videogamesFiltered;
   return {
-    deleted: videogameDeletedAPI,
+    deleted: videoGameDeletedApiArray,
     games: videogamesFiltered,
   };
 };
