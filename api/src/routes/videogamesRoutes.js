@@ -7,12 +7,11 @@ const {getVideoGames,getVideoGame,postVideoGame,
 
 //Middlewares:
 
-const postValidate = require('../middlewares/validate');
+const postValidate = require('../middlewares/postValidate');
 
 //Router:
 
 const videogamesRouter = Router();
-
 
 //Enrutado:
 
