@@ -1,6 +1,7 @@
 const { Videogame , Genre } = require('../../db');
 
 const createVideoGame = async (name, description, platforms, background_image, released, rating, genres) => {
+  // console.log(platforms) // ["PC","PS5","XBOX-ONE"]
   // Formatear plataforms como un array de objetos
   const platformsMap = platforms.map((platform) => {
     return { name: platform };
@@ -27,10 +28,11 @@ const createVideoGame = async (name, description, platforms, background_image, r
     name,
     background_image,
     released,
-    platforms: platformsMap,
+    platforms: platforms,
     description,
     rating,
   };
+  // console.log(videoGameFormat.platforms) // [{name: "PC"},{name: "PS5"},{name: "XBOX-ONE"}]
 
   const newVideoGame = await Videogame.create(videoGameFormat);
 
@@ -38,7 +40,8 @@ const createVideoGame = async (name, description, platforms, background_image, r
     const genresBDD = await Genre.findAll({ where: { name: resolvedGenres.map((genre) => genre.name) } });
     await newVideoGame.addGenres(genresBDD);
   }
-
+  // console.log(newVideoGame.platforms); // [ 'PC', 'PS5', 'XBOX-ONE' ]
+  // console.log(platformsMap) // [ { name: 'PC' }, { name: 'PS5' }, { name: 'XBOX-ONE' } ]
   return {
     id: newVideoGame.id,
     name: newVideoGame.name,
