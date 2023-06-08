@@ -12,7 +12,7 @@ const deleteAVideoGameBDD = async (id) => {
       id: id
     }
   });
-  if(!videogameDeletedBDD) throw Error (`No se eliminó el videojuego de id: ${id}`);
+  if(!videogameDeletedBDD) throw Error (`No se encuentra o no se eliminó el videojuego de id: ${id}`);
   return videogameDeletedBDD;
 };
 
