@@ -3,7 +3,7 @@ module.exports = async  (req,res,next)=>{
   const {name,description,platforms,background_image,released,rating,genres} = req.body;
   try {
     const videogames = await getAllVideoGames();
-    if (videogames.some((videogame) => videogame.name === name)) throw new Error(`No puede haber 2 videojuegos con el mismo nombre! ${name} - ${videogames.name}`)  
+    if (videogames.some((videogame) => videogame.name === name)) throw new Error(`Ya existe un videojuego con el nombre: ${name}`)  
     if(!name) throw new Error(`Falta el nombre del videojuego`)
     if(!description) throw new Error (`Falta la descripción del juego`);
     if(!platforms) throw new Error (`Faltan las plataformas donde estará el juego`);
