@@ -5,7 +5,7 @@ const cleanArrayDetail = require('../../helpers/cleanArrayDetail');
 const cleanArrayDetailBDD = require('../../helpers/cleanArrayDetailBDD')
 
 const getVideogameByIdApi = async (id) => {
-  //Hacemos l
+  //Hacemos la petición
   const videoGameApiRaw = (await axios.get(`${APIGames}/${id}?key=${API_KEY}`)).data
   // console.log(videoGameApiRaw)
   const videoGameInfo = cleanArrayDetail([videoGameApiRaw]);
@@ -17,7 +17,7 @@ const getVideogameByIdBDD = async (id) => {
   const videogameBDD = await Videogame.findByPk(id,{
     include:{
       model: Genre,
-      attributes: ['name'],
+      attributes: ['name'], // Si quiero que me muestre el id del genre, agrego id - ['id','name]
       through:{
         attributes: [], //No quiero valores de la tabla intermedia
       }
