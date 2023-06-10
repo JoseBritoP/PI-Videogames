@@ -8,7 +8,7 @@ const cleanArrayDetail = (array) =>{
     });
 
     const descriptionSplit = game.description_raw?.split(".")
-    const description = descriptionSplit.join("")
+    const description = descriptionSplit.slice(0,4).join("")
 
     return {
       id: game.id,
