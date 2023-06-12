@@ -35,36 +35,31 @@
 }
 
 .card {
-  border-radius: 15px;
-  padding: 10px 25px;
-  padding: 0 1.5rem;
+  border-radius: 1rem;
+  /* padding: 10px 25px; */
   box-sizing: border-box;
   /* background-color: #292929; */
-  box-shadow: #f2f2f2;
-  box-shadow: 5px 5px 5px 5px rgba(255, 30, 0, 0.308);
   /* background-color: linear-gradient(to bottom, #3b0369, rgba(216, 92, 92, 0.5)); */
-  margin-right: auto;
+  margin: auto;
+  margin-bottom: 0.2rem;
   background-color: #170f22;  
-  background-image: linear-gradient(to bottom, #120020, rgba(39, 11, 11, 0.5));
-  width: 320px;  
-  height: 600px;
-  position: relative;
+  background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
+  /* width: 330px;   */
+  width: 20.6rem;
+  /* height: 560px; */
+  height: 35rem;
+  /* position: relative; */
   border: 0.2rem solid var(--rosD);
   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
-
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* border: 20rem solid var(--azul); */
+  /* ... */
+  transform: scale(1);
+  transition: transform 0.3s ease;
 }
 
 .card-title-container{
   padding: 1rem;
   text-decoration: none !important;
-  height: 5rem;
+  height: 5em;
   justify-content:center;
   text-align: center;
 }
@@ -82,80 +77,91 @@
   text-decoration: none;
   color:var(--rosD);
   font-weight: bold;
-  text-shadow: 0px 0px 5px rgba(228, 74, 95, 0.418);
+  text-shadow: 0px 0px 0.5px rgba(228, 74, 95, 0.418);
 }
 
 .card-image img {
   max-width: 100%;
-  border-radius: 10px;
-  width: 300px;
-  height: 200px;
+  border-radius: 0.4rem;
+  width: 250px;
+  width: 15.69rem;
+  height: 180px;
+  height: 11.25rem;
   object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #C7C7C7; /* Borde de la imagen */
-  border: 2px solid #FEDC56;
-  border: 2px solid #FF8800;
+  /* border: 2px solid #C7C7C7; Borde de la imagen */
+  /* border: 2px solid #FEDC56; */
+  /* border: 2px solid #FF8800; */
   border: 0.2rem solid var(--naranjaBrillante); /* Hacemos el borde inicialmente transparente */
-}
-
-.card-content {
-  color: #C7C7C7; /* Color del contenido de la tarjeta */
-  color: #00FFEA;
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5); /* Efecto de iluminado */
 }
 
 .card-subtitle {
-  font-size: 1.3rem;
-  font-weight: bold;
   justify-content: center;
   color: var(--ros); /* Color del subtítulo */
-  text-shadow: 0px 0px 5px rgba(232, 74, 95, 0.8);
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-shadow: 0px 0px 0.5px rgba(232, 74, 95, 0.8);
 }
+
 
 .card-elements {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   /* background-color: linear-gradient(to bottom, #2f2644, rgba(27, 23, 37, 0.5)); */
   /* background-color: #1B1725; */
   /* color: #C7C7C7; */
   /* color: #3b0369; */
   /* padding: top right bottom left */
-  padding: 0.1rem 0rem;
-  align-items: center;
+  /* padding: 0.1rem 0rem; */
+  /* padding-bottom: 1.5rem; */
+  /* padding: auto; */
+  margin-bottom: 1rem;
 }
 
 .card-elements p {
-  width: 40%;
-  margin-bottom: 10px;
-  margin: 0px 0px 1rem 0px;
+  width: 35.5%;
+  /* margin-bottom: 10px; */
+  margin-bottom: 0.5rem;
   border-radius: 1rem;
   text-align: center;
-  padding: 5px;
+  padding: 0.30rem;
   background-color: #1B1725;
   color: var(--verdeSaturado);
-  font-weight: 400;
-  border: 0.2rem solid var(--verdeSaturado);
-  box-shadow: 0px 0px 8px 2px rgba(78, 232, 95, 0.5);
-  text-shadow: 0px 0px 5px rgba(78, 232, 95, 0.8);
+  font-weight: 500;
+  border: 0.1rem solid var(--verdeSaturado);
+
+  /* font-weight: bold; */
 }
+
 /* ---------- */
 
 .card-rating-released {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #C7C7C7; /* Color de fuente para Rating y Released */
   color: var(--ros); /* Puedes utilizar tu variable personalizada --ros */
   margin-top: 10px; /* Puedes ajustar el margen superior según tus necesidades */
   margin: auto;
   width: 100%;
+  /* visibility: hidden; */
+  opacity: 0;
+  /* transition: visibility 0.5s ease-in; */
+  transition: opacity 0.3s ease-in;
+  /* background-color: var(--naranjaplus); */
+  padding-bottom: 1rem;
 }
 
+
 .card-rating-released p {
-  margin: 5px 0; /* Ajusta los márgenes superior e inferior según tus necesidades */
+  /* margin: 5px 0; Ajusta los márgenes superior e inferior según tus necesidades */
+  padding: 0px 1rem;
   font-weight: bold;
-  font-size: .9rem;
-  margin-right: 1px;
+  font-size: .8rem;
+  /* margin-right: 1rem; */
+  margin-left: 1rem;
+
 }
 
 .card-rating-released span {
@@ -166,4 +172,29 @@
 .card-rating-released img {
   width: .8rem;
   height: .8rem;
+}
+
+/* Hover */
+
+.card:hover {
+  /* height: 35rem; */
+  transform: scale(1.12);
+  cursor:default;
+}
+
+.card-subtitle:hover{
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-shadow: 0px 0px 5px rgba(232, 74, 95, 0.8);
+}
+
+.card:hover .card-elements p{
+  box-shadow: 0px 0px 8px 2px rgba(78, 232, 95, 0.5);
+  text-shadow: 0px 0px 5px rgba(78, 232, 95, 0.8);
+}
+
+
+.card:hover .card-rating-released {
+  /* visibility: visible; */
+  opacity: 1;
 }
