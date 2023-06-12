@@ -178,7 +178,6 @@
 .card-subtitle:hover{
   font-size: 1.6rem;
   font-weight: 800;
-    text-shadow: 0px 0px 5px rgba(232, 74, 95, 0.8);
 }
 
 .card:hover .card-elements p{
