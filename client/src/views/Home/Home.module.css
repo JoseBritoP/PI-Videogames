@@ -1,0 +1,13 @@
+.home {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  text-align: center;
+  /* background-image: url('./image//Night\ sky\ fille\ 0.png');  */
+  /* background-image: url('./image//4910984.gif');  */
+  background-image: url('../../image//6272395.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit:contain;
+  /* width: 70%; */
+}
