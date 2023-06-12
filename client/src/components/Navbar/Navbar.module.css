@@ -1,0 +1,110 @@
+:root{
+  /* Morado */
+  --moradoTranqui:#863bc4;
+  --moradoCool:#490f94; 
+  --moradoClaro:#8027e6; 
+  --moradoApagadoOscuro: #2c0750; 
+  --inte: #2f2644;
+  --moradotop: #120020;
+  --morado: #8A4F7D;
+  --moradoplus:  #3b0369;
+  /* Amarillo */
+  --amarillo: #ffe44cda;
+  --amarilloClaro: #FFD56A;
+  /* Naranja */
+  --naranja: #b9701ce5;
+  --naranjaplus: #FF8800;
+  --naranjaBrillante: #FF6633;
+  --naranjaClaro: #FFAC6A;
+  /* Azul */
+  --azul: #007396;
+  --azulverdoso: #7EA8AA;
+  --azulSaturado: #4d5ace;
+  /* Verde */
+  --verde: #095000;
+  --verdeclaro: #A8D8AA;
+  --verdeSaturado: #4EE85F;
+  --verdeSat: #45ca55c5;
+  /* Rosado */
+  --ros: #E84A5F;
+}
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+  justify-content: space-around;
+  align-items: center;
+  width: 99.80%;
+  position:fixed;
+  margin-top: auto;
+  z-index: 2;
+  margin-bottom: 5.5rem;
+  /* border: 2px solid var(--ros); */
+  border-bottom: 3px solid var(--ros);
+  border-left: 2px solid var(--ros);
+  border-right: 2px solid var(--ros);
+  border-bottom-left-radius: 0.2rem ;
+  border-bottom-right-radius: 0.2rem;
+  background-color: #0F0A16;  
+  background-image: linear-gradient(to bottom, #120020, rgba(39, 11, 11, 0.5));
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+}
+
+.nav-image{
+  color: var(--ros);
+  width: 200px;
+}
+
+.nav-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(46, 7, 7);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border-radius: 2rem;
+  background-color: white;
+}
+.nav-search img{
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+.nav-search input{
+  /* border: 2px solid black; */
+  /* border-radius: 2rem; */
+  border:none;
+  border-bottom-right-radius:2rem;
+  border-top-right-radius: 2rem;
+  padding: 1rem;
+  user-select: none;
+  /* padding-left: 3rem; */
+}
+
+.nav-search input:focus{
+  outline: none;
+}
+
+.nav-search:hover, .nav-search:focus {
+  border-radius: 2rem;
+  border: 2px solid var(--ros);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+}
+
+.nav-routes{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.nav-routes h3{
+  text-decoration: none;
+  border: 2px solid var(--ros);
+  padding: 0.6rem;
+  border-radius: 1.6rem;
+  width: 100%;
+  color:var(--ros);
+  text-anchor: unset;
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  text-shadow: 0px 0px 0.5px rgba(228, 74, 95, 0.418);
+}
