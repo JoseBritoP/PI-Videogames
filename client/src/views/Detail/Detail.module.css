@@ -41,10 +41,11 @@
   background-repeat: no-repeat;
   background-position: center;
   object-fit:contain;
+  height: 175vh; /* Utilizamos la unidad de altura vh para ocupar toda la altura de la ventana */
 }
 .card {
   box-sizing: border-box;
-  width: 50%;
+  width: 45%;
   padding: 20px;
   margin: 0 auto;
   /* background-color: #292929; */
