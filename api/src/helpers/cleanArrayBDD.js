@@ -1,5 +1,5 @@
 const cleanArrayBDD = (videogame) => {
-  console.log(videogame.platforms) // [ 'PC', 'PS5' ]
+  // console.log(videogame.platforms) // [ 'PC', 'PS5' ]
   const platformsMap = videogame.platforms?.map((elem) => {
     return {
       name: elem
@@ -13,6 +13,8 @@ const cleanArrayBDD = (videogame) => {
     background_image: videogame.background_image,
     genres: videogame.Genres?.map((genre) => ({ name: genre.name })),
     platforms: videogame.platforms?.map((platform)=>({name: platform})),
+    rating: videogame.rating,
+    released: videogame.released,
     created: videogame.created,
   };
 };

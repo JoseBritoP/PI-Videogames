@@ -11,6 +11,8 @@ const cleanArray = (array) =>{
       background_image: elem.background_image,
       genres: genresMap,
       platforms: platformsMap,
+      rating: elem.rating,
+      released: elem.released,
       created: false,
     }
   });
