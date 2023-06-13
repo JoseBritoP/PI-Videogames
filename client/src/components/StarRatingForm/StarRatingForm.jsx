@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import star from '../../image/icons/star.png';
 import starEmpty from '../../image/icons/starEmpty.png';
+// import starlight from '../../image/icons/starlight.png';
 import style from './StarRatingForm.module.css'; // Importa el archivo CSS para el componente
 
 const StarRatingForm = () => {
