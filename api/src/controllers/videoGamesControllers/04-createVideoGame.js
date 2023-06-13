@@ -2,7 +2,8 @@ const { Videogame , Genre } = require('../../db');
 
 const createVideoGame = async (name, description, platforms, background_image, released, rating, genres) => {
   // console.log(platforms) // ["PC","PS5"]
-
+  // ? Format de image
+  // const imageFormat = background_image.split(".png").imageFormat[0]
   // ? Formateo de las platforms
   // Formatear plataforms como un array de objetos
   const platformsMap = platforms.map((platform) => ({ name: platform }));
@@ -16,8 +17,8 @@ const createVideoGame = async (name, description, platforms, background_image, r
   const genresFormat = genres.map(async (genreName) => {
     // genreName: Action RPG Card Fantasy Rouge-like
     const genreInBDD = await Genre.findOne({ where: { name: genreName } });
-    console.log("genreInBDD")
-    console.log(genreInBDD.dataValues)
+    // console.log("genreInBDD")
+    // console.log(genreInBDD.dataValues)
     if (genreInBDD) {
       return { id: genreInBDD.id, name: genreInBDD.name };
     } else throw new Error(`El género "${genreName}" no existe en la base de datos.`);
