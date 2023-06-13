@@ -8,7 +8,7 @@ const Card = (props) => {
     <div className={style['card']}>
 
       <div className={style['card-title-container']}>
-        <Link to={`/detail/${id}`}>
+        <Link to={`/detail/${id}`} style={{textDecoration:"none"}}>
           <h1 className={style['card-title']}>{name}</h1>
         </Link>
       </div>
