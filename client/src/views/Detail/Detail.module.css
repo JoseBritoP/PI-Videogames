@@ -1,160 +1,189 @@
 /* Variables */
 
 :root{
- /* Morado */
- --moradoTranqui:#863bc4;
- --moradoCool:#490f94; 
- --moradoClaro:#8027e6; 
- --moradoApagadoOscuro: #2c0750; 
- --inte: #2f2644;
- --moradotop: #120020;
- --morado: #8A4F7D;
- --moradoplus:  #3b0369;
- /* Amarillo */
- --amarillo: #ffe44cda;
- --amarilloClaro: #FFD56A;
- /* Naranja */
- --naranja: #b9701ce5;
- --naranjaplus: #FF8800;
- --naranjaBrillante: #FF6633;
- --naranjaClaro: #FFAC6A;
- /* Azul */
- --azul: #007396;
- --azulverdoso: #7EA8AA;
- --azulSaturado: #4d5ace;
- /* Verde */
- --verde: #095000;
- --verdeclaro: #A8D8AA;
- --verdeSaturado: #4EE85F;
- --verdeSat: #45ca55c5;
- /* Rosado */
- --ros: #E84A5F;
-}
-.card-container{
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 8.5rem 2rem;
-  /* nav */
-  background-image: url('../../image//6272395.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit:contain;
-  /* height: 180vh;  */
-  /* Utilizamos la unidad de altura vh para ocupar toda la altura de la ventana */
-}
-
-.card {
-  box-sizing: border-box;
-  width: 50%;
-  padding: 20px;
-  margin: 0 auto;
-  /* background-color: #292929; */
-  background-color: #0F0A16;  
-  box-shadow: #f2f2f2;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
-  /* background-color: linear-gradient(to bottom, #3b0369, rgba(216, 92, 92, 0.5)); */
-  background-image: linear-gradient(to bottom, #120020, rgba(39, 11, 11, 0.5));
-  border: 0.2rem solid var(--ros);
-  border-radius: 15px;
-  border: 0.2rem solid var(--ros);
-  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
-}
-
-.card-title-container{
-  justify-content:center;
-  text-align: center;
-  text-decoration: none !important;
-}
-
-.card-title {
-  text-align: center;
-  color: #C7C7C7; /* Color del título */
-  text-decoration: none !important;
-  color: var(--ros);
-  font-weight: bold;
-}
-
-.card-image img {
-  max-width: 100%;
-  border-radius: 10px;
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 0.2rem solid var(--naranjaBrillante);
-  box-shadow: 0px 0px 8px 2px rgba(228, 161, 74, 0.5); /* Efecto de iluminado */
-}
-
-.card-subtitle {
-  font-size: 1.6rem;
-  font-weight: bold;
-	justify-content: center;
-  color: var(--ros); /* Color del subtítulo */
-}
-
-.card-elements {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: linear-gradient(to bottom, #2f2644, rgba(27, 23, 37, 0.5));
-  /* background-color: #1B1725; */
-  /* padding: 0px .1rem; */
-  padding: 0.1rem 3rem;
-  align-items: center;
-  gap:2rem;
-}
-
-.card-elements p {
-  width: 25%;
-  margin-bottom: 10px; 
-  margin: 0px 0px 1rem 0px;
-	border-radius: 1rem;
-	text-align: center;
-  padding: 0.4rem;
-  /* background-color: #051a00; */
-  background-color: #1B1725;
-  color: var(--verdeSaturado);
-  font-weight: 400;
-  border: 0.2rem solid var(--verdeSaturado); 
-  box-shadow: 0px 0px 8px 2px rgba(78, 232, 95, 0.5);
-  text-shadow: 0px 0px 5px rgba(78, 232, 95, 0.8);
-}
-
-.card-description p{
-  color: #FFF;
-  text-align: center;
-  text-decoration: none;
-  text-align: justify;
-  margin: 2rem;
-}
-
-.card-rating-released {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #C7C7C7; /* Color de fuente para Rating y Released */
-  color: var(--ros); /* Puedes utilizar tu variable personalizada --ros */
-  margin-top: 10px; /* Puedes ajustar el margen superior según tus necesidades */
-  gap:5rem;
-}
-
-.card-rating-released p {
-  margin: 5px 0; /* Ajusta los márgenes superior e inferior según tus necesidades */
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.card-rating-released span {
-  font-weight: bold;
-  color: #FFF;
-}
-
-.card-rating-released img {
-  width:  1.3rem;
-  height: 1.3rem;
-}
-
-
+  /* Morado */
+  --moradoTranqui:#863bc4;
+  --moradoCool:#490f94; 
+  --moradoClaro:#8027e6; 
+  --moradoApagadoOscuro: #2c0750; 
+  --inte: #2f2644;
+  --moradotop: #120020;
+  --morado: #8A4F7D;
+  --moradoplus:  #3b0369;
+  /* Amarillo */
+  --amarillo: #ffe44cda;
+  --amarilloClaro: #FFD56A;
+  /* Naranja */
+  --naranja: #b9701ce5;
+  --naranjaplus: #FF8800;
+  --naranjaBrillante: #FF6633;
+  --naranjaClaro: #FFAC6A;
+  /* Azul */
+  --azul: #007396;
+  --azulverdoso: #7EA8AA;
+  --azulSaturado: #4d5ace;
+  /* Verde */
+  --verde: #095000;
+  --verdeclaro: #A8D8AA;
+  --verdeSaturado: #4EE85F;
+  --verdeSat: #45ca55c5;
+  /* Rosado */
+  --ros: #E84A5F;
+ }
+ 
+ .card-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   align-items: center;
+   padding: 8.5rem 2rem;
+   /* nav */
+   background-image: url('../../image//6272395.gif');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   object-fit: contain;
+   width: 100%;
+   /* height: calc(100% - 8.5rem);  */
+   /* Resta la altura de la barra de navegación */
+   /* top: 12rem;  */
+   /* Ajusta el valor según la altura de tu barra de navegación */
+   left: 0;
+ }
+ 
+ .card {
+   box-sizing: border-box;
+   width: 50%;
+   padding: 20px;
+   margin: 0 auto;
+   margin-bottom: 5rem;
+   /* background-color: #292929; */
+   box-shadow: #f2f2f2;
+   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+   /* background-color: linear-gradient(to bottom, #3b0369, rgba(216, 92, 92, 0.5)); */
+   background-color: #0F0A16;  
+   background-image: linear-gradient(to bottom, #120020, rgba(39, 11, 11, 0.5));
+   border: 0.2rem solid var(--ros);
+   border-radius: 15px;
+   border: 0.2rem solid var(--ros);
+   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+ }
+ 
+ .card-title-container{
+   justify-content:center;
+   text-align: center;
+   text-decoration: none !important;
+ }
+ 
+ .card-title {
+   text-align: center;
+   color: #C7C7C7; /* Color del título */
+   text-decoration: none !important;
+   color: var(--ros);
+   font-weight: bold;
+ }
+ 
+ .card-image img {
+   max-width: 100%;
+   border-radius: 10px;
+   width: 600px;
+   height: 400px;
+   object-fit: cover;
+   border-radius: 10px;
+   border: 0.2rem solid var(--naranjaBrillante);
+   box-shadow: 0px 0px 8px 2px rgba(228, 161, 74, 0.5); /* Efecto de iluminado */
+ }
+ 
+ .card-subtitle {
+   font-size: 1.6rem;
+   font-weight: bold;
+   justify-content: center;
+   color: var(--ros); /* Color del subtítulo */
+ }
+ 
+ .card-elements {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   background-color: linear-gradient(to bottom, #2f2644, rgba(27, 23, 37, 0.5));
+   /* background-color: #1B1725; */
+   /* padding: 0px .1rem; */
+   padding: 0.1rem 3rem;
+   align-items: center;
+   gap:2rem;
+ }
+ 
+ .card-elements p {
+   width: 25%;
+   margin-bottom: 10px; 
+   margin: 0px 0px 1rem 0px;
+   border-radius: 1rem;
+   text-align: center;
+   padding: 0.4rem;
+   /* background-color: #051a00; */
+   background-color: #1B1725;
+   color: var(--verdeSaturado);
+   font-weight: 400;
+   border: 0.2rem solid var(--verdeSaturado); 
+   box-shadow: 0px 0px 8px 2px rgba(78, 232, 95, 0.5);
+   text-shadow: 0px 0px 5px rgba(78, 232, 95, 0.8);
+ }
+ 
+ .card-description p{
+   color: #FFF;
+   text-align: center;
+   text-decoration: none;
+   text-align: justify;
+   margin: 2rem;
+ }
+ 
+ .card-rating-released {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   color: #C7C7C7; /* Color de fuente para Rating y Released */
+   color: var(--ros); /* Puedes utilizar tu variable personalizada --ros */
+   margin-top: 10px; /* Puedes ajustar el margen superior según tus necesidades */
+   gap:5rem;
+ }
+ 
+ .card-rating-released p {
+   margin: 5px 0; /* Ajusta los márgenes superior e inferior según tus necesidades */
+   font-weight: bold;
+   font-size: 1.5rem;
+   margin-bottom: 2rem;
+ }
+ 
+ .card-rating-released span {
+   font-weight: bold;
+   color: #FFF;
+ }
+ 
+ .card-rating-released img {
+   width:  1.3rem;
+   height: 1.3rem;
+ }
+ 
+ 
+ /* button */
+ 
+ .card-bottonHome{
+   background-color: #0F0A16;  
+   padding: 1.2rem 2rem;
+   border: .25rem solid var(--ros);
+   border-radius: 1rem;
+   font-size: bold;
+   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+   color: var(--ros);
+   text-shadow: 0px 0px 0.5px rgba(228, 74, 95, 0.418);
+   background-image: linear-gradient(to bottom, #120020, rgba(90, 30, 30, 0.5));
+   font-weight: bold;
+ }
+ 
+ .card-bottonHome:hover{
+   cursor:pointer;
+   background-image: linear-gradient(to top, #120020, rgba(122, 43, 43, 0.5));
+   text-shadow: 0px 0px 0.5px rgba(253, 116, 135, 0.418);
+   color: var(--ros);
+ }
