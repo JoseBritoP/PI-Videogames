@@ -18,14 +18,17 @@ const getVideoGames = async (req,res) =>{
 
 const getVideoGame = async (req,res)=>{
   const {id} = req.params;
+  if(!Number(id) && !isNaN(id)) throw new Error (`El id ingresado no es válido`)
   // return res.status(200).json({message:`Aquí se traerá el videojuego de id: ${id}`});
   try {
     const videogameFound = isNaN(id) ? await getVideogameByIdBDD(id) : await getVideogameByIdApi(id);
+    if(!videogameFound) throw new Error (`No se encontró el videojuego de id: ${id}`)
     return res.status(200).json(videogameFound);
   } catch (error) {
-    console.log(error)
-    return res.status(404).json({error: error.message})
+    if(error.name.includes("Axios"))
+    return res.status(404).json({error: `No se encontró el videojuego de id ${id}`})
   }
+  return res.status(400).json({error:error.message})
 }
 
 const postVideoGame = async (req,res) => {
