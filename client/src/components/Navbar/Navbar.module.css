@@ -37,9 +37,7 @@
   align-items: center;
   width: 99.80%;
   position:fixed;
-  margin-top: auto;
   z-index: 2;
-  margin-bottom: 5.5rem;
   /* border: 2px solid var(--ros); */
   border-bottom: 3px solid var(--ros);
   border-left: 2px solid var(--ros);
@@ -78,7 +76,6 @@
   border-top-right-radius: 2rem;
   padding: 1rem;
   user-select: none;
-  /* padding-left: 3rem; */
 }
 
 .nav-search input:focus{
@@ -89,6 +86,13 @@
   border-radius: 2rem;
   border: 2px solid var(--ros);
   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+}
+
+.nav-search button{
+  border-radius: 1rem;
+  margin-right: 1rem;
+  border: 2px solid var(--ros);
+  box-shadow: 0px 0px 4px 1px rgba(228, 74, 95, 0.5);
 }
 
 .nav-routes{
