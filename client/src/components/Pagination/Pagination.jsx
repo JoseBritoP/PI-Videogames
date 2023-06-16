@@ -32,8 +32,8 @@ const Pagination = (props) => {
             {pageNumber}
           </button>
         ))}
-        <button onClick={nextPage} disabled={currentPage === totalPages}>{">"}</button>
-        <button onClick={goToLastPage} disabled={currentPage === totalPages}> {">>"}</button>
+      <button onClick={nextPage} disabled={currentPage === totalPages}>{">"}</button>
+      <button onClick={goToLastPage} disabled={currentPage === totalPages}> {">>"}</button>
     </div>
   )
 }
