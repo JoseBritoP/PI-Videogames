@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import style from './Landing.module.css'
+import { useDispatch } from 'react-redux';
+import { getAllVideogames } from '../../redux/actions';
 
 const Landing = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const handleStart = (e) => {
     e.preventDefault();
+    dispatch(getAllVideogames())
     navigate("/home");
   };
   return (
