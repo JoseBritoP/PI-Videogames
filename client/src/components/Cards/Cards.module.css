@@ -7,4 +7,6 @@
   padding: 8.5rem 2rem;
   box-sizing: border-box;
   height: 100%;
+  justify-items: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
 }
