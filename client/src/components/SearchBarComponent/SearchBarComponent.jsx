@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import searchIcon from '../../image/icons/search.png'
-import { getVideogamesBySearch} from '../../redux/actions'
+import { getVideogamesBySearch, clearVideogamesBySearch} from '../../redux/actions'
 import { useDispatch } from 'react-redux'
 import style from './SearchBarComponent.module.css'
 const SearchBarComponent = (props) => {
@@ -22,7 +22,14 @@ const SearchBarComponent = (props) => {
     const query = event.target.value;
     setInputValue(query);
   };
-
+  
+  const handleSearchRequest = () => {
+    if (inputValue.length <= 4) return;
+    if (/\d/.test(inputValue)) return;
+    if (inputValue === "" || inputValue.trim() === "") return;
+    dispatch(getVideogamesBySearch(inputValue));
+  };
+  
   const handleClearSearch = () => {
     if (inputValue === "" || inputValue.trim() === "") {
       return
@@ -30,18 +37,10 @@ const SearchBarComponent = (props) => {
     setInputValue("");
     setHasSearch(false);
     resetPagination()
-    dispatch(getVideogamesBySearch([]));
+    dispatch(clearVideogamesBySearch());
   };
-
-  const handleSearchRequest = () => {
-    if (inputValue.length <= 4) return;
-    if (/\d/.test(inputValue)) return;
-    if (inputValue === "" || inputValue.trim() === "") return;
-    dispatch(getVideogamesBySearch(inputValue));
-  };
-
+  
   const searchDisabled = inputValue === "" || inputValue.trim() === "" || /\d/.test(inputValue) || inputValue.length <= 4 || !/^[A-Za-z0-9:]+$/.test(inputValue); 
-
 
   return (
     <div className={style['searchbar-container']}>
