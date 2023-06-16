@@ -44,13 +44,13 @@ const Detail = () => {
         
         <div className={style["genres-platforms-container"]}>
           <div className={style["card-content"]}>
-            <h2 className={style['card-subtitle']}>Genres:</h2>
+            <h2 className={style['card-subtitle']}>Genres</h2>
             <div className={style['card-elements']}>
               {videoGameDetail.genres.map((genre,index) => (<p key={index}>{genre.name}</p>))}
             </div>
           </div>
           <div className={style["card-content"]}>
-            <h2 className={style['card-subtitle']}> Platforms:</h2>
+            <h2 className={style['card-subtitle']}> Platforms</h2>
             <div className={style['card-elements']}>
               {videoGameDetail.platforms.map((platform,index) => (<p key={index}>{platform.name}</p>))}
             </div>
