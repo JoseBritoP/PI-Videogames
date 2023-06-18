@@ -1,32 +1,35 @@
-import React, { useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+// import React, { useEffect } from 'react'
+// import { useNavigate, useParams } from 'react-router-dom'
+// Dependencias:
+// import { useSelector, useDispatch } from 'react-redux'
+// import { getVideogameDetail} from '../../redux/actions'
+// import { CLEAN_VIDEOGAME_DETAIL } from '../../redux/actions-types'
 import style from './Detail.module.css'
 import star from '../../image/icons/star.png'
 import Spinner from '../../components/Spinner/Spinner'
-// Dependencias:
-import { useSelector, useDispatch } from 'react-redux'
-import { getVideogameDetail} from '../../redux/actions'
-import { CLEAN_VIDEOGAME_DETAIL } from '../../redux/actions-types'
+import { useNavigate } from 'react-router-dom';
+import useVideogameDetail from '../../hooks/useVideogameDetail';
+
 const Detail = () => {
-  // Necesitamos el id para llamar a la action:
-  const { id } = useParams();
-  // La necesitamos para la redirección de nuestra página web
+  // // Necesitamos el id para llamar a la action:
+  // const { id } = useParams();
+  // // La necesitamos para la redirección de nuestra página web
   const navigate = useNavigate();
-  // Dispatch
-  const dispatch = useDispatch()
-  // Necesitamos acceder al estado global / Hacer que el componente se suscriba con useSelector || mapStateToProps
+  // // Dispatch
+  // const dispatch = useDispatch()
+  // // Necesitamos acceder al estado global / Hacer que el componente se suscriba con useSelector || mapStateToProps
   
-  const videoGameDetail = useSelector((state)=> state.videogameDetail)
-  // Cuando el componente se monte, hará el dispatch para obtener el detalle del videojuego en cuestión - componentDidMount - useEffect
-  // Cuando el componente se desmonte, lo limpiamos para que no quede como un caché - componenteDidUnmount - return en UseEffect y la action type
+  // const videoGameDetail = useSelector((state)=> state.videogameDetail)
+  // // Cuando el componente se monte, hará el dispatch para obtener el detalle del videojuego en cuestión - componentDidMount - useEffect
+  // // Cuando el componente se desmonte, lo limpiamos para que no quede como un caché - componenteDidUnmount - return en UseEffect y la action type
 
-  useEffect(()=>{
-    dispatch(getVideogameDetail(id))
-    return ()=>{
-      dispatch({type:CLEAN_VIDEOGAME_DETAIL})
-    }
-  },[id,dispatch]);
-
+  // useEffect(()=>{
+  //   dispatch(getVideogameDetail(id))
+  //   return ()=>{
+  //     dispatch({type:CLEAN_VIDEOGAME_DETAIL})
+  //   }
+  // },[id,dispatch]);
+  const videoGameDetail = useVideogameDetail()
   const backToHome = ()=>{
     navigate('/home');
   }
