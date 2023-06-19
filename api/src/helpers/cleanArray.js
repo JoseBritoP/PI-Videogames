@@ -9,10 +9,10 @@ const cleanArray = (array) =>{
       id: elem.id,
       name: elem.name,
       background_image: elem.background_image,
-      genres: genresMap,
-      platforms: platformsMap,
-      rating: elem.rating,
-      released: elem.released,
+      genres: genresMap || "Unknown",
+      platforms: platformsMap || "Unknown",
+      rating: elem.rating || 0,
+      released: elem.released || "Unknown",
       created: false,
     }
   });

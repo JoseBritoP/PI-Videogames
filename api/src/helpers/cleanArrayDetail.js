@@ -15,10 +15,10 @@ const cleanArrayDetail = (array) =>{
     name: game.name,
     background_image: game.background_image,
     genres: genresMap,
-    platforms: plataformsMap,
-    rating: game.rating,
-    released: game.released,
-    description: description,
+    platforms: plataformsMap || "unknown",
+    rating: game.rating || 0,
+    released: game.released || "unknown",
+    description: description || "unknown",
     created: false,
   };
   
