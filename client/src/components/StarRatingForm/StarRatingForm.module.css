@@ -13,6 +13,11 @@
   /* background-color: red; */
 }
 
+.stars-container img:hover{
+  cursor: pointer;
+  /* background-image: linear-gradient(to bottom, #24220a, rgba(27, 27, 27, 0.473)); */
+  background-image: url('../../image//icons//starlight.png');
+}
 .clicked {
   background-image: url('../../image/icons/starlight.png');
   animation: starAnimation 1s; /* Duración de la animación */

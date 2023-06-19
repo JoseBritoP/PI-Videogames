@@ -4,18 +4,19 @@ import starEmpty from '../../image/icons/starEmpty.png';
 // import starlight from '../../image/icons/starlight.png';
 import style from './StarRatingForm.module.css'; // Importa el archivo CSS para el componente
 
-const StarRatingForm = () => {
-  const [rating, setRating] = useState(1);
+const StarRatingForm = ({rating, setRating, handleChangeForm}) => {
+ 
   const [clickedStar, setClickedStar] = useState(null);
 
   const handleStarClick = (selectedRating) => {
     setRating(selectedRating);
     setClickedStar(selectedRating);
-
-    // Reinicia el estado 'clickedStar' después de 1 segundo para detener la animación
     setTimeout(() => {
       setClickedStar(null);
     }, 1000);
+  
+    // Llama a la función handleChangeForm con el evento
+    handleChangeForm({ target: { name: 'rating', value: selectedRating, type: 'number' } });
   };
 
   return (
