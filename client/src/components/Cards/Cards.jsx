@@ -11,14 +11,14 @@ const Cards = (props) => {
     <div className={style['card-grid']}>
 			{videogames.length === 0 ? (<Spinner/>) 
 				:(
-					videogames.map((videogame) => (
+					videogames?.map((videogame) => (
 						<Card
 							key={videogame.id}
 							id={videogame.id}
 							name={videogame.name}
 							image={videogame.background_image}
 							genres={videogame.genres.map((genre) => genre.name + " ")}
-							platforms={videogame.platforms.map((platform) => platform.name + " ")}
+							// platforms={videogame.platforms.map((platform) => platform.name + " ")}
 							released={videogame.released}
 							rating={videogame.rating}
 						/>))
