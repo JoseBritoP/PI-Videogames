@@ -1,4 +1,4 @@
-import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTERED_BY_GENRES,FILTER_CREATED} from './actions-types'
+import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTERED_BY_GENRES,FILTER_CREATED,FILTER_BY_RELEASED} from './actions-types'
 import axios from 'axios';
 
 export const getAllVideogames = () => {
@@ -112,4 +112,8 @@ export const postVideogame = (form) => {
   export const filterCreated = (value) =>{
     return {
       type:FILTER_CREATED ,payload:value}
+  };
+
+  export const filterByDate = (date) => {
+    return {type: FILTER_BY_RELEASED, payload: date}
   };
