@@ -13,8 +13,8 @@ const getGenresVideoGames = () => {
     });
 
     return Promise.all(promises)
-      .then((results) => {
-        const createdGenres = results.map((result) => result[0].get({ plain: true }));
+      .then(() => {
+        // const createdGenres = results.map((result) => result[0].get({ plain: true }));
         const allGenres = Genre.findAll();
         // return createdGenres;
         return allGenres;

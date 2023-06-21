@@ -17,15 +17,6 @@ const getAllVideogames = async () => {
     },
   });
   const videogamesBDDFormat = videogamesBDD.map((videogame) => cleanArrayBDD(videogame));
-  // const videogamesBDDFormat = videogamesBDD.map((videogame)=>{
-  //   return {
-  //     id: videogame.id,
-  //     name: videogame.name,
-  //     background_image: videogame.background_image,
-  //     genres: videogame.Genres.map((genre) => ({ name: genre.name })),
-  //     created: videogame.created,
-  //   }
-  // })
   
   // ? API
   // const videoGamesApiRaw = (await axios.get(`${APIGames}?key=${API_KEY}`)).data.results
