@@ -54,6 +54,8 @@ const createVideoGame = async (name, description, platforms, background_image, r
 
   // console.log(newVideoGame.dataValues)
   // console.log(newVideoGame.platforms) // [ 'PC', 'PS5' ]
+  if(platformsMap.length === 0) throw Error (`El videojuego debe estar mínimamente en una plataforma`);
+  if(resolvedGenres.length === 0) throw Error (`El videojuego debe tener al menos un género`);
   return {
     id: newVideoGame.id,
     name: newVideoGame.name,
