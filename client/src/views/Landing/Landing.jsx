@@ -20,7 +20,7 @@ const Landing = () => {
         <p>Dive into detailed game profiles, unleash your creativity as a game creator, and connect with fellow gamers in our vibrant community. Level up your gaming adventure today!</p>
       </div>
       <Link>
-        <input type="button" className={style['button']} value="Enjoy!"onClick={(e)=>handleStart(e)}/>
+        <input type="button" className={style['button']} value="Enjoy!" onClick={(e)=>handleStart(e)}/>
       </Link>
     </div>
   )
