@@ -81,6 +81,7 @@
 
 .active {
   background-color: rgb(0, 0, 0);
-  background-image: linear-gradient(to top, #220738, rgba(39, 11, 11, 0.5));
+  background-image: linear-gradient(to top, #310f4d, rgba(70, 29, 29, 0.5));
+  color: white !important;
   /* border: 2rem solid #da0f2a; */
 }

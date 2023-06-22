@@ -12,7 +12,9 @@ const Navbar = (props) => {
       <div className={style['nav-container']}>
         <div className={style['nav-image']}>
           {/* <h1>Logo videogames</h1> */}
-        <img src={logo} alt='logo'/>
+          <Link to="/home">
+            <img src={logo} alt='logo'/>
+          </Link>
         </div>
 
         <SearchBarComponent resetPagination={resetPagination}/>
