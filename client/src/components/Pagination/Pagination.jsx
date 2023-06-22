@@ -37,11 +37,7 @@ const Pagination = (props) => {
         {"<"}
       </button>
       {Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index).map((pageNumber) => (
-        <button
-          key={pageNumber}
-          onClick={() => setCurrentPage(pageNumber)}
-          className={currentPage === pageNumber ? style['active'] : ''}
-        >
+        <button key={pageNumber} onClick={() => setCurrentPage(pageNumber)} className={currentPage === pageNumber ? style['active'] : ''}>
           {pageNumber}
         </button>
       ))}
