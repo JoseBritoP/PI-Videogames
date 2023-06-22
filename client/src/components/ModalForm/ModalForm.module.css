@@ -42,6 +42,7 @@
   border: 0.2rem solid rgb(230, 58, 58);
   border-radius: 2rem;
   color:#FFF;
+  cursor: pointer;
 };
 
 .modal-div button:hover{
