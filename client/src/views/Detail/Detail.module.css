@@ -31,6 +31,15 @@
  --ros: #E84A5F;
 }
 
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
 .card-container {
   display: flex;
   justify-content: center;

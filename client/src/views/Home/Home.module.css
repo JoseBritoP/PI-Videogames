@@ -34,6 +34,15 @@
   --rosD: #c51933;
 }
 
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
 .home-container{
   display: flex;
   flex-direction: column;
