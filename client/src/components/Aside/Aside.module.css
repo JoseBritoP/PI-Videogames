@@ -33,50 +33,64 @@
   --rosV: #f56c80;
   --rosD: #c51933;
 }
+
 .aside-container{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: transparent;
-  padding: 8.5rem 2rem ; 
+  padding: 7.5rem 2rem ; 
   border-right: 0.2rem solid var(--ros);
   /* box-shadow: 5px 5px 5px 5px rgba(255, 30, 0, 0.308); */
-  /* background-color: #170f22;   */
+  background-color: #170f22;  
   background-image: linear-gradient(to right, #120020, rgba(31, 10, 10, 0.815));
   gap: 2rem;
   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
   font-weight: bold;
+  justify-content: flex-start;
+  padding-left: 1.5rem;
+  padding-right: 16rem;
+  overflow: auto;
+} 
+.fixed{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: fixed;
+  margin-bottom: 1rem;
+  padding-bottom:1rem;
 }
-
-.aside-order{
+/* .button{
+  background-color: #120020;
+  border-radius: 1rem;
+  width: 5rem;
+  margin-left: 4.5rem;
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid var(--rosD);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
   color: #FFF;
-  border: 0.3rem solid var(--rosD);
-  background-image: linear-gradient(to right, #120020, rgba(31, 10, 10, 0.815));
-  border-radius: 2rem;
-  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
 }
 
-.aside-order h1{
-  font-size: 1.5rem;
+.button:hover{
+  cursor: pointer;
+  background-color: #FFF;
+  color: #120020;
+}
+ */
+.message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1rem;
+  width:13.5rem;
+  height: 13.56rem;
+}
+.message p {
+  text-align: justify;
+  color: var(--naranjaClaro);
 }
 
-.aside-order p{
-  font-size: 1rem;
-}
-
-.aside-filtered{
-  color:#FFF;
-  border: 0.3rem solid var(--rosD);
-  background-image: linear-gradient(to right, #120020, rgba(31, 10, 10, 0.815));
-  border-radius: 2rem ;
-  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
-}
-
-.aside-filtered h1{
-  font-size: 1.5rem;
-}
-
-.aside-filtered p{
-  font-size: 1rem;
+.message span{
+  color: #FFF;
 }
