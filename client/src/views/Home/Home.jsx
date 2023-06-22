@@ -11,28 +11,25 @@ const Home = (props) => {
 
   const videogames = useSelector((state) => state.videogames);  //* Suscribimos el componente a redux con el hook useSelector
 
-  const ITEMS_PER_PAGE = 15; //* Establezco el límite de cartas por página
+  const VIDEOGAMES_PER_PAGE = 15; //* Establezco el límite de cartas por página
   
   const [items, setItems] = useState([]); //* Creo un useState de los items = cards de videogames
 
   //! Aquí establezco la cantidad de páginas según la cantidad de elementos/items/videogames 
-  const totalPages = Math.ceil(videogames.length / ITEMS_PER_PAGE);
-  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+  const totalPages = Math.ceil(videogames.length / VIDEOGAMES_PER_PAGE);
 
-  //* Cuando el componente se monta, hago que la página se establezca en 1 y dependerá de la función setCurrentPage y de videogamesBySearch
+  //* Cuando el componente se monta, hago que la página se establezca en 1 y dependerá de la función setCurrentPage
   useEffect(() => {
     setCurrentPage(1);
   }, [setCurrentPage]);
 
-
   //* en este useEffect, 
   useEffect(() => {
-    const firstIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const lastIndex = firstIndex + ITEMS_PER_PAGE;
-    // const slicedItems = videoGames.slice(firstIndex, lastIndex);
+    const firstIndex = (currentPage - 1) * VIDEOGAMES_PER_PAGE; //Indice del primer elemento del array -> (1-1) * 15 -> 0 
+    const lastIndex = firstIndex + VIDEOGAMES_PER_PAGE; // Indice del ultimo elemento 0 + 15 -> 15
     const slicedItems = videogames.slice(firstIndex, lastIndex);
     setItems(slicedItems);
-  }, [currentPage, ITEMS_PER_PAGE, videogames]);
+  }, [currentPage, VIDEOGAMES_PER_PAGE, videogames]);
 
   return (
     <div className={style['home-container']}>
@@ -40,7 +37,7 @@ const Home = (props) => {
         <Aside videogames={items} resetPagination={resetPagination}/>
         <div>
           <Cards videogames={items}/>
-          <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages} pageNumbers={pageNumbers}/>
+          <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} totalPages={totalPages}/>
         </div>
       </div>
     </div>
