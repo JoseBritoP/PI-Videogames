@@ -36,11 +36,11 @@
 
 .card {
   border-radius: 1rem;
-  /* padding: 10px 25px; */
+  /* padding: 10px 20px; */
   box-sizing: border-box;
   /* background-color: #292929; */
   /* background-color: linear-gradient(to bottom, #3b0369, rgba(216, 92, 92, 0.5)); */
-    margin: auto;
+    /* margin: auto; */
   background-color: #170f22;  
   background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
   width: 320px;  
@@ -75,7 +75,7 @@
   color: #C7C7C7; /* Color del título */
   color: var(--ros);
   margin: 0;
-  margin: 0.9rem;
+  /* margin: 0.9rem; */
   padding: 0.5rem;
 }
 
