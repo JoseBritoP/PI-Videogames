@@ -4,7 +4,7 @@
   grid-template-columns: repeat(auto-fit, minmax(20.6rem, 1fr));
   margin: auto;
   gap: 2.5rem;
-  padding: 8.5rem 2rem;
+  padding: 8.5rem 2.5rem;
   box-sizing: border-box;
   height: 100%;
   justify-items: center; /* Centrar horizontalmente */
