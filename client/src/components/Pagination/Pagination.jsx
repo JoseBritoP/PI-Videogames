@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Pagination.module.css'
 const Pagination = (props) => {
   
-  const {currentPage,setCurrentPage,totalPages,/*pageNumbers*/} = props;
+  const {currentPage,setCurrentPage,totalPages} = props;
   
   //* Limitar la cantidad de botones
   const max_Buttons = 5;
