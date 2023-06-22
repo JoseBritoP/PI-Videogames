@@ -37,6 +37,7 @@
 .home-container{
   display: flex;
   flex-direction: column;
+  
 }
 .home {
   /* position: relative; */
@@ -51,8 +52,10 @@
   background-position: center;
   object-fit: contain;
   min-height: 100vh;
-  max-height: 300vh;
+  /* max-height: 300vh; */
+  min-width: 100vh;
 }
+
 /* Botones páginado */
 
 .home-button{
