@@ -1,0 +1,56 @@
+.modal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.336);
+  background-image: url('../../image//modal.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  border: 0.2rem solid brown;
+  color: black;
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  gap: 2rem;
+  bottom: 10px;
+  /* padding: 2rem 2rem; */
+  position: fixed;
+  background-color: #FFF;
+}
+
+.modal-div{
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* align-items: space-evenly; */
+}
+
+.modal-div h2{
+  color:#FFF;
+  flex-grow: 0;
+}
+
+.modal-div button{
+  padding: 1rem;
+  width: 8rem;
+  margin: 90% 38.6%;
+  background-color: rgb(18, 2, 32);
+  border: 0.2rem solid rgb(230, 58, 58);
+  border-radius: 2rem;
+  color:#FFF;
+};
+
+.modal-div button:hover{
+  cursor: pointer;
+  background-color: red;
+}
+/* Completar modal
+  Formulario, subir archivo roto
+  Searchbar, roto método split en cards...debe ser algo de las validaciones(?
+  AsideBar, fecha rota porque puede haber un juego sin fecha
+  Filters -> boolean o veo
+*/
