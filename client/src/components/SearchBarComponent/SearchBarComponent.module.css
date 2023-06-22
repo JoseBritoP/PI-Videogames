@@ -20,6 +20,7 @@
   border-top-right-radius: 2rem;
   padding: 1rem;
   user-select: none;
+  width: 15rem;
 }
 
 .searchbar-container input:focus{
