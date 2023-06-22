@@ -24,6 +24,15 @@
   color: #999;
 }
 
-.text-link{
-  color: white;
+.text-container button{
+  border: 0.2rem solid #E84A5F;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  background-color: #000;
+  color: #FFF;
+}
+
+.text-container  button:hover{
+  cursor: pointer;
+  color: #E84A5F;;
 }
