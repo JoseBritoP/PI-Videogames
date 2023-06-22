@@ -15,11 +15,11 @@ const Card = (props) => {
       <div className={style['card-image']}>
         <img src={image} alt={name} />
       </div>
-        <div className={style['card-content']}>
-          <h2 className={style['card-subtitle']}>Genres:</h2>
-          <div className={style['card-elements']}>
-            {genres && genres.map((genre, index) => <p key={index}>{genre}</p>)}
-          </div>
+      <div className={style['card-content']}>
+        <h2 className={style['card-subtitle']}>Genres:</h2>
+        <div className={style['card-elements']}>
+          {genres && genres.map((genre, index) => <p key={index}>{genre}</p>)}
+        </div>
       </div>
       <div className={style['card-rating-released']}>
         <p>Rating: <span>{rating}</span><img src={star} alt='star' /></p>

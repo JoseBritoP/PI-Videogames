@@ -108,8 +108,12 @@
   margin: 0;
   margin-top: 0.66rem;
   padding-bottom: 0.5rem;
+  overflow: auto;
 }
 
+.card-content{
+  height: 10rem;
+}
 
 .card-elements {
   flex-shrink: 1;
@@ -117,22 +121,12 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: linear-gradient(to bottom, #2f2644, rgba(27, 23, 37, 0.5)); */
-  /* background-color: #1B1725; */
-  /* color: #C7C7C7; */
-  /* color: #3b0369; */
-  /* padding: top right bottom left */
-  /* padding: 0.1rem 0rem; */
-  /* padding-bottom: 1.5rem; */
-  /* padding: auto; */
-  /* margin-bottom: 1rem; */
+  overflow-y: scroll;
+  height: 6.5rem;
 }
 
 .card-elements p {
-  /* flex-shrink: 1;   */
-  /* flex-basis: 10%; */
   width: 35.5%;
-  /* margin-bottom: 10px; */
   margin-bottom: 0.5rem;
   border-radius: 1rem;
   text-align: center;
@@ -143,7 +137,6 @@
   border: 0.1rem solid var(--verdeSaturado);
   margin: 0;
   margin: 0.4rem 0;
-  /* font-weight: bold; */
 }
 
 /* ---------- */
@@ -152,27 +145,21 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--ros); /* Puedes utilizar tu variable personalizada --ros */
+  color: var(--ros);
   height: 10%;
-  /* margin-top: 10px;  */
   margin: auto;
   width: 100%;
-  /* visibility: hidden; */
   opacity: 0;
-  /* transition: visibility 0.5s ease-in; */
   transition: opacity 0.3s ease-in;
-  /* background-color: var(--naranjaplus); */
-  /* margin-top: 1rem; */
 }
 
 
 .card-rating-released p {
-  margin: 5px 0; /* Ajusta los márgenes superior e inferior según tus necesidades */
+  margin: 5px 0;
   padding: 0px 1rem;
   font-weight: bold;
   font-size: .8rem;
-  /* margin-right: 1rem; */
-  margin-left: 1rem;
+  margin-bottom: 3.1em;
 }
 
 .card-rating-released span {
