@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Error.module.css'
-import { getAllVideogames } from '../../redux/actions'
+import { getAllGenres, getAllVideogames } from '../../redux/actions'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
@@ -13,6 +13,7 @@ const Error = () => {
     event.preventDefault();
     navigate('/home');
     dispatch(getAllVideogames());
+    dispatch(getAllGenres());
   }
   return (
   <div className={`page-transition ${location.pathname !== '/' ? 'page-enter' : ''}`}>

@@ -21,7 +21,7 @@ const Home = (props) => {
   //! Aquí establezco la cantidad de páginas según la cantidad de elementos/items/videogames 
   const totalPages = Math.ceil(videogames.length / VIDEOGAMES_PER_PAGE);
 
-  //* Cuando el componente se monta, hago que la página se establezca en 1 y dependerá de la función setCurrentPage
+  //* Cuando el componente se monta, hago que la página se establezca en 1
   // useEffect(() => {
   //   setCurrentPage(1);
   // }, [setCurrentPage]);
