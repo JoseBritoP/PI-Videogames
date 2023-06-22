@@ -23,7 +23,7 @@ const AsideOrigin = ({resetPagination}) => {
   return (
     <div className={style['aside-origin']}>
     <p>Origin</p>
-    <select name="" id="" onChange={handleCreatedApiChange}>
+    <select   onChange={handleCreatedApiChange}>
       <option value="All">---</option>
       <option value="All">Both</option>
       <option value="api">In API</option>
