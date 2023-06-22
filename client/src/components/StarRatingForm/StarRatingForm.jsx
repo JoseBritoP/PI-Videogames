@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import star from '../../image/icons/star.png';
 import starEmpty from '../../image/icons/starEmpty.png';
-import style from './StarRatingForm.module.css'; // Importa el archivo CSS para el componente
+import style from './StarRatingForm.module.css';
 
 const StarRatingForm = ({ rating, setRating, handleChangeForm }) => {
   const [clickedStar, setClickedStar] = useState(rating);
@@ -26,8 +26,7 @@ const StarRatingForm = ({ rating, setRating, handleChangeForm }) => {
             alt={`Star ${value}`}
             onClick={(event) => handleStarClick(value,event)}
             className={`${style.star} ${
-              clickedStar >= value ? style.clicked : ''
-            }`}
+              clickedStar >= value ? style.clicked : ''}`}
           />
         ))}
       </div>
