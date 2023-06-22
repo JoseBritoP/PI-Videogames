@@ -11,14 +11,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding:8.5rem 2.6rem; 
-  width: 100%;
+  padding:0 2.6rem;
+  padding-top:4rem; 
+  /* width: 100%; */
   height: 120%;
   color:#FFF;
   box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
+  width: 94.8vw;
   /* border: 0.2rem solid var(--rosD); */
   /* box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5); */
 }
+
 .form-container h1{
   color:white;
   background-color: #120020;
@@ -26,10 +29,13 @@
   padding:0.8rem 1.5rem;
   border-radius: 1rem;
 }
+.form-container-span{
+  color: #7d4ec0;
+}
 .form-fieldset{
   margin-top: 1rem;
-  height: 82.2%;
-  width: 45.5%;
+  height: 72.2%;
+  width: 27.5%;
   padding-bottom: 1.2rem;
   border: 2px solid blueviolet;
   border-radius: 0.5rem;
@@ -37,20 +43,30 @@
   background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
   box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
   border: 0.2rem solid #7d4ec0;
+  /* padding-bottom: 5rem; */
 }
 /* #55229c 
 #6c39b4
 */
+
+.form-name-image-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
 
 /* name  */
 .form-name {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.5rem 0 0 0.5rem;
+  padding: 0.5rem;
   padding-bottom: 0;
+  height: 5.6rem;
   max-width: 100%;
   max-height: 100%;
+  /* margin-right:2.5rem ; */
 }
 
 .form-name label {
@@ -58,10 +74,14 @@
 }
 
 .form-name input {
-  width: 70%; /* Opcional: Ajusta el ancho del input al 100% */
-  width: 32.4%; /* Opcional: Ajusta el ancho del input al 100% */
+  /* width: 70%;
+  width: 32.4%; 
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem; */
+  width: 100%; /* Opcional: Ajusta el ancho del input al 100% */
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem; 
+  width: 16rem;
 }
 
 .form-name span{
@@ -82,8 +102,10 @@
   align-items: flex-start;
   padding: 0.5rem;
   padding-bottom: 0;
+  height: 5.6rem;
   max-width: 100%;
   max-height: 100%;
+  /* margin-left: 1.5rem; */
 }
 
 .form-image span{
@@ -104,6 +126,7 @@
   width: 100%; /* Opcional: Ajusta el ancho del input al 100% */
   border-radius: 1rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem; 
+  width: 15rem;
 }
 
 .form-inputs{
@@ -143,6 +166,7 @@
   max-height: 100%;
   min-height: 16.9%;
   padding-bottom: 1rem;
+  /* margin-top: 0.6rem; */
 }
 .form-platforms span{
   background-color: rgb(48, 12, 12);
@@ -192,30 +216,32 @@
   align-items: flex-start;
   padding: 0.5rem;
   padding-bottom: 0;
-  /* gap: 1rem; */
-  /* gap: 0.5rem; */
+  margin-bottom: 0;
+  gap: 1rem 1rem 0 1rem;
   max-width: 100%;
-  min-height: 17%;
   max-height: 100%;
+  min-height: 16.9%;
+  padding-bottom: 1rem;
+  margin-top: 0.6rem;
 }
-
 .form-genres span{
   background-color: rgb(48, 12, 12);
   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
   border: 0.2rem solid red;
   border-radius: 1rem;
   padding: .2rem 1rem;
+  /* margin-bottom: 1rem; */
   font-size: small;
   text-align: center;
 }
-
 
 .form-genres-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* background-color: aqua; */
   padding: 0.2rem;
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .form-genres-div{
@@ -230,6 +256,11 @@
   border-radius: 0.5rem; /* Agrega bordes redondeados */
   background-color: rebeccapurple;
   margin: 0.2rem;
+}
+
+.form-genres-div input{
+  border-radius: 1rem;
+  border: 2px solid white;
 }
 
 /* rating-released container */
@@ -252,6 +283,8 @@
   align-items: center;
   padding: 0.5rem;
   padding-bottom: 0;
+  height: 5rem;
+  width: 20rem;
 }
 
 .form-rating span{
@@ -284,6 +317,9 @@
   padding-bottom: 0;
   /* background-color: yellow; */
   padding-bottom: 0.1rem;
+  height: 6rem;
+  width: 20rem;
+
 }
 .form-released span{
   background-color: rgb(48, 12, 12);
@@ -293,6 +329,8 @@
   padding: .2rem 1rem;
   font-size: small;
   text-align: center;
+  margin-top: 0.2rem;
+  /* max-width: fit-content; */
 }
 
 
@@ -301,10 +339,11 @@
 }
 
 .form-released input{
-  width: 85.5%;
+  /* width: 85.5%; */
   border-radius: 1rem;
   padding: 0.5rem;
   border: 2px solid #7717ff;
+  margin-bottom: 0.2rem;
 }
 
 /* Description */
@@ -337,13 +376,14 @@
 .form-description textarea{
   border-radius: 1rem;
   padding: 0.5rem;
-  border: 0.2rem solid #7717ff;;
-  border: 0.2rem solid #320f63;;
+  border: 0.2rem solid #7717ff;
+  border: 0.2rem solid #320f63;
+  resize: none;
 }
 
 /* Errors */
 
-.error{
+.error {
   border: 0.2rem solid rgba(255, 29, 29, 0.836);
   box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
 }
@@ -353,7 +393,6 @@
 .success {
   border: 0.2rem solid rgba(40, 231, 40, 0.856);
   box-shadow: 0px 0px 8px 2px rgba(92, 201, 20, 0.5);
-
 }
 
 .form-button{

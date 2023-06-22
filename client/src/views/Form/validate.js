@@ -14,26 +14,27 @@ export const validateName = (form,errors,setErrors) => {
   }
 };
 
-export const validateImage = (form,errors,setErrors) => {
+export const validateImage = (form, errors, setErrors) => {
   // console.log("image")
   // console.log(form.background_image)
-  const image = form.background_image.split("?")[0]
-  console.log(image)
-  if(image === ""){
-    setErrors({...errors,image: "El input de la imagen no puede estar vacío"})
-  } else if(image.trim() === "") {
-    setErrors({...errors,image: "El input de la imagen no puede estar compuesta por espacios"})
-  }else if(!/\.(jpg|jpeg|png|gif|bmp)$/.test(image)){ 
-    setErrors({...errors,image: "La imagen debe tener formato jpg,png o similares"})
+  const image = form.background_image.split("?")[0];
+
+  if (image === "") {
+    setErrors({ ...errors, image: "El input de la imagen no puede estar vacío" });
+  } else if (image.trim() === "") {
+    setErrors({ ...errors, image: "El input de la imagen no puede estar compuesto por espacios" });
+  } else if (!/\.(jpg|jpeg|png|gif|bmp)$/.test(image)) {
+    setErrors({ ...errors, image: "La imagen debe tener formato jpg, png o similares" });
   } else {
-    setErrors({...errors,image:""});
+    setErrors({ ...errors, image: "" });
   }
 };
 
 export const validatePlatforms = (form,errors,setErrors) => {
+  const maxPlatforms = 19;
   if(form.platforms.length === 0) {
     setErrors({...errors,platforms: "El juego debe estar en al menos, una plataforma"})
-  } else if(form.platforms === form.platforms.length){
+  } else if(form.platforms.length === maxPlatforms){
     setErrors({...errors,platforms: "El juego no puede estar en todas las plataformas"})
   }else {
     setErrors({...errors,platforms:""});
@@ -41,8 +42,11 @@ export const validatePlatforms = (form,errors,setErrors) => {
 };
 
 export const validateGenres = (form,errors,setErrors) => {
+  const maxGenres = 20;
   if(form.genres.length === 0) {
     setErrors({...errors,genres: "El juego debe tener al menos un género"})
+  } else if(form.genres.length === maxGenres){
+    setErrors({...errors,genres: "El videojuego no puede tener todos los géneros"})
   } else{ 
     setErrors({...errors,genres:""})
   };
@@ -56,12 +60,11 @@ export const validateRating = (form,errors,setErrors) => {
   }
 };
 
-export const validateReleased =(form,errors,setErrors) => {
-  const dateInput = document.getElementById("dateInput").value;
-  if(dateInput === "" || dateInput === null) {
-    setErrors({...errors,released: "El juego debe tener una fecha de lanzamiento"})
-  } else{
-    setErrors({...errors,image:""});
+export const validateReleased = (form, errors, setErrors) => {
+  if (form.released === "" || form.released === null) {
+    setErrors({ ...errors, released: "El juego debe tener una fecha de lanzamiento" });
+  } else {
+    setErrors({ ...errors, released: "" });
   }
 };
 

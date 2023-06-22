@@ -20,17 +20,18 @@ export const handleChangeForm = (event, form, setForm, errors, setErrors) =>{
     validateImage({ ...form, [property]: value.trim() }, errors, setErrors);
   }
 
-  if (property === "image-file" && type === "file") {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+  // if (property === "image-file" && type === "file") {
+  //   const file = event.target.files[0];
+  //   const reader = new FileReader();
 
-    reader.onloadend = () => {
-      setForm({ ...form, image: file.name }); //Aquí seteamos el valor del input de la imagen al nombre del archivo
-      // Aquí también puedes validar la imagen si es necesario
-    };
+  //   reader.onloadend = () => {
+  //     setForm({ ...form, image: file.name }); // Aquí seteamos el valor del input de la imagen al nombre del archivo
+  //     // Aquí también puedes validar la imagen si es necesario
+  //   };
 
-    reader.readAsDataURL(file);
-  }
+  //   reader.readAsDataURL(file);
+  // }
+
   if (property === "platforms" && type === "checkbox") {
     //! platforms
     const platform = event.target.value; // Sería value también
@@ -67,7 +68,7 @@ export const handleChangeForm = (event, form, setForm, errors, setErrors) =>{
   if(property === "released" && type === "date"){
     //! released
     setForm({...form,[property]:value});
-    validateReleased({...form,[property]:value},errors,setErrors)
+    validateReleased({ ...form, [property]: value }, errors, setErrors);
 
   };
 
