@@ -18,7 +18,7 @@ function App() {
       {location.pathname !== "/" && <Navbar resetPagination={resetPagination}/>}
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/home" element={<Home currentPage={currentPage} setCurrentPage={setCurrentPage}/>} />
+          <Route path="/home" element={<Home currentPage={currentPage} setCurrentPage={setCurrentPage} resetPagination={resetPagination}/>} />
           <Route path="/create" element={<Form />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/*" element={<Error />} />
