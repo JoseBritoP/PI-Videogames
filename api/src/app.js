@@ -3,6 +3,6 @@ const app = require('./index');
 const{ sequelize } = require('./db');
 
 app.listen(3001,()=>{
-  sequelize.sync({force:true}) // Luego lo pasamos a alter:true para que no se borren los datos
+  sequelize.sync({alter:true}) // Luego lo pasamos a alter:true para que no se borren los datos
   console.log('Server on port 3001')
 });

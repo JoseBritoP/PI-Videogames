@@ -25,10 +25,11 @@ const getVideoGame = async (req,res)=>{
     if(!videogameFound) throw new Error (`No se encontró el videojuego de id: ${id}`)
     return res.status(200).json(videogameFound);
   } catch (error) {
-    if(error.name.includes("Axios"))
-    return res.status(404).json({error: `No se encontró el videojuego de id ${id}`})
+    if(error.name.includes("Axios")){
+      return res.status(404).json({error: `No se encontró el videojuego de id ${id}`})
+    }
+    return res.status(400).json({error:error.message})
   }
-  return res.status(400).json({error:error.message})
 }
 
 const postVideoGame = async (req,res) => {
@@ -40,15 +41,6 @@ const postVideoGame = async (req,res) => {
   } catch (error) {
     return res.status(404).json({error:error.message});
   }
-  // return res.status(200).json({message: `En esta ruta se creará un videojuego con los siguientes datos:
-  //  nombre: ${name}
-  //  descripción: ${description}
-  //  plataformas: ${platforms}
-  //  imagen: ${background_image}
-  //  fecha: ${released}
-  //  rating: ${rating}
-  //  genres: ${genres}
-  //  `})
 };
 
 const deleteVideoGame = async (req,res) => {
