@@ -1,4 +1,4 @@
-const { Videogame,Genre} = require('../../db');
+const { Videogame } = require('../../db');
 const cleanArray = require('../../helpers/cleanArray');
 const getAllVideoGames = require('./01-getAllVideoGames')
 const {getVideogameByIdApi,getVideogameByIdBDD} = require('./03-getVideoGameById');

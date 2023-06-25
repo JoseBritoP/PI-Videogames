@@ -3,11 +3,13 @@ const getVideoGamesByName = require('./videoGamesControllers/02-getVideoGamesByN
 const { getVideogameByIdApi,getVideogameByIdBDD} = require('./videoGamesControllers/03-getVideoGameById');
 const createVideoGame = require('./videoGamesControllers/04-createVideoGame')
 const { deleteAVideoGameAPI,deleteAVideoGameBDD } = require('./videoGamesControllers/05-deleteAVideogame');
+const updateAVideogame = require ('./videoGamesControllers/06-updateAVideogame');
 
 module.exports = {
   getAllVideoGames,
   getVideoGamesByName,
   getVideogameByIdApi,getVideogameByIdBDD,
   createVideoGame,
-  deleteAVideoGameAPI,deleteAVideoGameBDD 
+  deleteAVideoGameAPI,deleteAVideoGameBDD,
+  updateAVideogame
 }
