@@ -1,6 +1,6 @@
 // Controllers:
 
-const {getAllVideoGames,  getVideoGamesByName, getVideogameByIdApi,getVideogameByIdBDD,createVideoGame, deleteAVideoGameAPI,deleteAVideoGameBDD } =  require('../controllers/index');
+const {getAllVideoGames,  getVideoGamesByName, getVideogameByIdApi,getVideogameByIdBDD,createVideoGame, deleteAVideoGameAPI,deleteAVideoGameBDD, updateAVideogame } =  require('../controllers/index');
 
 // Handlers:
 
@@ -53,6 +53,16 @@ const deleteVideoGame = async (req,res) => {
   }
 };
 
+const putVideogame = async (req, res) => {
+  const { id } = req.params;
+  const { name, platforms, background_image, released, rating, genres } = req.body;
+  try {
+    const videogameToUpdate = await updateAVideogame(id, name, platforms, background_image, released, rating, genres);
+    return res.status(200).json(videogameToUpdate);
+  } catch (error) {
+    return res.status(404).json({ error: error.message });
+  }
+};
 module.exports = {
-  getVideoGames,getVideoGame,postVideoGame, deleteVideoGame,
+  getVideoGames,getVideoGame,postVideoGame, deleteVideoGame, putVideogame
 }
