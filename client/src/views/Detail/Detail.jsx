@@ -1,4 +1,4 @@
-// import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 // import { useNavigate, useParams } from 'react-router-dom'
 // Dependencias:
 // import { useSelector, useDispatch } from 'react-redux'
@@ -7,30 +7,16 @@
 import style from './Detail.module.css'
 import star from '../../image/icons/star.png'
 import Spinner from '../../components/Spinner/Spinner'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import useVideogameDetail from '../../hooks/useVideogameDetail';
-
+import DeletePutDetail from '../../components/DeletePutDetail/DeletePutDetail';
 const Detail = () => {
-  const location = useLocation();
-  // // Necesitamos el id para llamar a la action:
-  // const { id } = useParams();
-  // // La necesitamos para la redirección de nuestra página web
-  const navigate = useNavigate();
-  // // Dispatch
-  // const dispatch = useDispatch()
-  // // Necesitamos acceder al estado global / Hacer que el componente se suscriba con useSelector || mapStateToProps
-  
-  // const videoGameDetail = useSelector((state)=> state.videogameDetail)
-  // // Cuando el componente se monte, hará el dispatch para obtener el detalle del videojuego en cuestión - componentDidMount - useEffect
-  // // Cuando el componente se desmonte, lo limpiamos para que no quede como un caché - componenteDidUnmount - return en UseEffect y la action type
 
-  // useEffect(()=>{
-  //   dispatch(getVideogameDetail(id))
-  //   return ()=>{
-  //     dispatch({type:CLEAN_VIDEOGAME_DETAIL})
-  //   }
-  // },[id,dispatch]);
-  const videoGameDetail = useVideogameDetail()
+  const location = useLocation();
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const videoGameDetail = useVideogameDetail();
+  
   const backToHome = ()=>{
     navigate('/home');
   }
@@ -40,6 +26,9 @@ const Detail = () => {
       <div className={style['card-container']}>
         {videoGameDetail.name ? (
           <div className={style['card']}>
+            {isNaN(id) ?
+              <DeletePutDetail id = {id}/>
+             : ""}
             <div className={style['card-title-container']}>
               <h1 className={style['card-title']}>{videoGameDetail.name}</h1>
             </div>
