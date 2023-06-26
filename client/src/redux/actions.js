@@ -1,4 +1,4 @@
-import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTER_BY_GENRES,FILTER_BY_ORIGIN,FILTER_BY_RELEASED} from './actions-types'
+import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTER_BY_GENRES,FILTER_BY_ORIGIN,FILTER_BY_RELEASED,DELETE_BY_ID} from './actions-types'
 import axios from 'axios';
 
 export const getAllVideogames = () => {
@@ -77,7 +77,7 @@ export const getAllPlatforms = () => {
 export const postVideogame = (form) => {
   return async function (dispatch){
     try {
-      console.log(form)
+      // console.log(form)
       const response= await axios.post(`http://localhost:3001/videogames`,form)
       // eslint-disable-next-line
       const newVideogame = response.data; //La info del nuevo videojuego
@@ -96,6 +96,19 @@ export const postVideogame = (form) => {
     }
   }
 };
+
+export const deleteVideogame = (id) => {
+  return async function(dispatch){
+    try {
+       await axios.delete(`http://localhost:3001/videogames/${id}`)
+      dispatch({type: DELETE_BY_ID,payload: id})
+    } catch (error) {
+      alert(`${error.response.data.error}`);
+    };
+  };
+};
+
+// Filtros
 
   export const orderBy = (order)=>{
     return function(dispatch){
