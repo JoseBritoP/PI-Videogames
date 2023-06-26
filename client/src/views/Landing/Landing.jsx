@@ -2,7 +2,7 @@ import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import style from './Landing.module.css'
 import { useDispatch } from 'react-redux';
-import { getAllGenres, getAllVideogames } from '../../redux/actions';
+import { getAllGenres, getAllVideogames,getAllPlatforms } from '../../redux/actions';
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -11,6 +11,7 @@ const Landing = () => {
     e.preventDefault();
     dispatch(getAllVideogames());
     dispatch(getAllGenres());
+    dispatch(getAllPlatforms())
     navigate("/home");
   };
   return (
