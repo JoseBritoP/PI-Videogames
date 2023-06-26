@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
-// import { useNavigate, useParams } from 'react-router-dom'
-// Dependencias:
-// import { useSelector, useDispatch } from 'react-redux'
-// import { getVideogameDetail} from '../../redux/actions'
-// import { CLEAN_VIDEOGAME_DETAIL } from '../../redux/actions-types'
+import React from 'react'
 import style from './Detail.module.css'
 import star from '../../image/icons/star.png'
 import Spinner from '../../components/Spinner/Spinner'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import useVideogameDetail from '../../hooks/useVideogameDetail';
 import DeletePutDetail from '../../components/DeletePutDetail/DeletePutDetail';
+
 const Detail = () => {
 
   const location = useLocation();
