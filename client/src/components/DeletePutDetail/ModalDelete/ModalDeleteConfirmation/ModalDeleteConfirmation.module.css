@@ -1,0 +1,16 @@
+.modal{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  height: 30%;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.822);
+  background-color: white;
+  padding: 1000rem;
+  border: 0.2rem solid brown;
+  border-radius: 1.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

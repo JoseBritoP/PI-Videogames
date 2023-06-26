@@ -1,0 +1,56 @@
+:root{
+  /* Morado */
+  --moradoTranqui:#863bc4;
+  --moradoCool:#490f94; 
+  --moradoClaro:#8027e6; 
+  --moradoApagadoOscuro: #2c0750; 
+  --inte: #2f2644;
+  --moradotop: #120020;
+  --morado: #8A4F7D;
+  --moradoplus:  #3b0369;
+  /* Amarillo */
+  --amarillo: #ffe44cda;
+  --amarilloClaro: #FFD56A;
+  /* Naranja */
+  --naranja: #b9701ce5;
+  --naranjaplus: #FF8800;
+  --naranjaBrillante: #FF6633;
+  --naranjaClaro: #FFAC6A;
+  /* Azul */
+  --azul: #007396;
+  --azulverdoso: #7EA8AA;
+  --azulSaturado: #4d5ace;
+  /* Verde */
+  --verde: #095000;
+  --verdeclaro: #A8D8AA;
+  --verdeSaturado: #4EE85F;
+  --verdeSat: #45ca55c5;
+  /* Rosado */
+  --ros: #E84A5F;
+ }
+
+.btn-delete{
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.btn-delete button{
+  padding: 0.5rem 0.8rem;
+  background-color: azure;
+  border: 2px solid aqua;
+  border-radius: 999999999999%;
+  background-color: #0F0A16;  
+  background-image: linear-gradient(to bottom, #120020, rgba(39, 11, 11, 0.5));
+  border: 0.2rem solid var(--ros);
+  color: var(--ros);
+  font-weight: bold;
+}
+
+.btn-delete button:hover{
+  cursor: pointer;
+  color: #FFF;
+  background-image: linear-gradient(to top, #120020, rgba(39, 11, 11, 0.5));
+  background-color: #f80021;
+  font-weight: bold;
+}

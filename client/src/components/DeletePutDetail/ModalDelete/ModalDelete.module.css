@@ -1,0 +1,50 @@
+.modal{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  height: 30%;
+  width: 25%;
+  background-color: white;
+  background-color: rgba(0, 0, 0, 0.822);
+  padding: 0 1rem;
+  border: 0.2rem solid brown;
+  border-radius: 1.2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal h1{
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+}
+
+.modal-confirmation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: aqua; */
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.modal-confirmation button{
+  padding: 0.66rem 1rem;
+  border-radius: 1rem;
+}
+
+.modal-confirmation button:first-child:hover{
+  background-color: #21f800;
+  color: #FFF;
+  border-color: #37ac25;
+}
+.modal-confirmation button:hover{
+  cursor: pointer;
+  color: #FFF;
+  background-image: linear-gradient(to top, #120020, rgba(39, 11, 11, 0.5));
+  background-color: #f80021;
+  font-weight: bold;
+}
