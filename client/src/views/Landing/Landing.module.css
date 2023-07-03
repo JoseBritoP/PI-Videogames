@@ -38,17 +38,21 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  justify-content: space-between;
   background-image: url('../../image/landing.gif');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   color: rgb(0, 0, 0);
   cursor: default;
+}
+
+.landing-back{
+  background-color: #12002073;
+  min-height: 100%;
+  height: 100vh;
 }
 
 .landing-p{
@@ -56,17 +60,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
-  padding: 2rem;
-  /* border: 2px solid red; */
-  text-align: center;
+  min-height: 100%;
 }
+
 .landing-p p{
-  margin-top:2rem ;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 6px;
-  font-size: large;
   font-size: 1.5rem;
   width: 50%;
   text-align: center;
@@ -75,37 +72,38 @@
   line-height: 26px;
 }
 
-
-
 .button{
-  background-size: contain;
   background-repeat: no-repeat;
-  /* background-color: transparent; */
   box-shadow: 0px 0px 8px 2px rgba(132, 29, 158, 0.8);
   width: 170px;
   height: 80px;
   border: none;
-  margin-bottom: 380px;
+  margin: 1.5rem 0;
   cursor: pointer;
   background-color:var(--azulSaturado);
   background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
   border: 0.35rem solid var(--moradoplus);
   border-radius: 0.9rem;
-  /* Texto */
   font-size: 2rem;
   font-weight: bold;
 }
 
 .button:hover {
- /* background-color: black; */
- /* border: 2rem solid black; */
- /* padding: 25rem 50rem; */
  background-image: linear-gradient(to top, #431c61, rgba(31, 10, 10, 0.473));
  text-shadow: 0px 0px 5px rgba(132, 29, 158, 0.8);
  box-shadow: 0px 0px 8px 2px rgba(115, 43, 133, 0.8);
- border: 0.35rem solid #9b58ce;
+ border: 0.35rem solid var(--moradoplus);
  color: #FFF;
  cursor: pointer;
 }
 
 
+@media (max-width: 400px) { 
+  .landing-back{
+    height: auto;
+  }
+
+  .landing-p p{
+    width: 95.5%;
+  }
+ }
