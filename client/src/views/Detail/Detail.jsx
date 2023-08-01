@@ -1,15 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import style from './Detail.module.css'
 import star from '../../image/icons/star.png'
 import Spinner from '../../components/Spinner/Spinner'
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import useVideogameDetail from '../../hooks/useVideogameDetail';
-import DeletePutDetail from '../../components/DeletePutDetail/DeletePutDetail';
+// import DeletePutDetail from '../../components/DeletePutDetail/DeletePutDetail';
 
 const Detail = () => {
 
   const location = useLocation();
-  const { id } = useParams();
+  // const { id } = useParams();
   const navigate = useNavigate();
   const videoGameDetail = useVideogameDetail();
   
@@ -22,9 +23,9 @@ const Detail = () => {
       <div className={style['card-container']}>
         {videoGameDetail.name ? (
           <div className={style['card']}>
-            {isNaN(id) ?
+            {/* {isNaN(id) ?
               <DeletePutDetail id = {id}/>
-             : ""}
+             : ""} */}
             <div className={style['card-title-container']}>
               <h1 className={style['card-title']}>{videoGameDetail.name}</h1>
             </div>
@@ -59,7 +60,7 @@ const Detail = () => {
           </div>
           ) : (<Spinner/>)
         }
-      <div className={style['card-bottonHome']}>
+        <div className={style['card-bottonHome']}>
         <button onClick={backToHome}>Home</button>
       </div>
     </div>
