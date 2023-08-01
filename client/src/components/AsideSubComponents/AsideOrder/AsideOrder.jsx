@@ -35,13 +35,13 @@ const AsideOrder = () => {
           <h1>Order By:</h1>
           <p>Alp</p>
           <select value={alpOrder} onChange={handleAlpChange}>
-            <option value="---">---</option>
+            <option value="---">Order</option>
             <option value="asc">ASC</option>
             <option value="dct">DESC</option>
           </select>
           <p>Rating</p>
           <select value={ratingOrder} onChange={handleRatingChange}>
-            <option value="---">---</option>
+            <option value="---">Order</option>
             <option value="top">5-0</option>
             <option value="low">0-5</option>
           </select>

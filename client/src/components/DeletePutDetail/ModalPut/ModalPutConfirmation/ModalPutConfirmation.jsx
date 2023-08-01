@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './ModalPutConfirmation.jsx'
+import style from './ModalPutConfirmation.module.css'
 
 const ModalPutConfirmation = () => {
   return (

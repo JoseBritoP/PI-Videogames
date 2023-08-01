@@ -9,12 +9,20 @@ const DeletePutDetail = ( {id}) => {
 
   const handleClickDelete = () => {
     setModalDEL(true);
-    setModalPUT(false)
+    setModalPUT(false);
+    if(modalDEL === true){
+      setModalDEL(false);
+      setModalPUT(false);
+    }
   };
 
   const handleClickPut = () => {
     setModalPUT(true);
-    setModalDEL(false)
+    setModalDEL(false);
+    if(modalPUT === true){
+      setModalDEL(false);
+      setModalPUT(false);
+    }
   };
 
   return (
@@ -23,7 +31,6 @@ const DeletePutDetail = ( {id}) => {
       {modalPUT && <ModalPut setModalPUT={setModalPUT}/>}
       <button onClick={handleClickDelete} >X</button>
       {modalDEL && <ModalDelete setModalDEL={setModalDEL} id={id}/>}
-      {/* {modalPUT && <ModalP/>} */}
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.modal{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 10%;
+  height: 1.9rem;
+  width: 25%;
+  width: 17rem;
+  background-image: linear-gradient(to top, #200d00, rgba(199, 83, 20, 0.5));
+  background-color: #ff6810;
+  border: 0.2rem solid rgb(255, 81, 0);
+  border-radius: 0.6rem;
+  transform: translate(-50%, -50%);
+  top: 110px;
+  right: -135px;
+}
+
+.modal h1{
+  color: #FFF;
+  font-size: 0.6rem;
+  text-align: justify;
+}

@@ -1,0 +1,456 @@
+.page-transition {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  background-color: #1e122b;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding:0 2.6rem;
+  padding-top:4rem; 
+  /* width: 100%; */
+  height: 120%;
+  color:#FFF;
+  box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
+  width: 94.8vw;
+  /* border: 0.2rem solid var(--rosD); */
+  /* box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5); */
+}
+
+.form-container h1{
+  color:white;
+  background-color: #120020;
+  border: 0.2rem solid brown;
+  padding:0.8rem 1.5rem;
+  border-radius: 1rem;
+}
+.form-container-span{
+  color: #7d4ec0;
+}
+.form-fieldset{
+  margin-top: 1rem;
+  height: 72.2%;
+  width: 27.5%;
+  padding-bottom: 1.2rem;
+  border: 2px solid blueviolet;
+  border-radius: 0.5rem;
+  background-color: #170f22;  
+  background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
+  box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
+  border: 0.2rem solid #7d4ec0;
+  /* padding-bottom: 5rem; */
+}
+/* #55229c 
+#6c39b4
+*/
+
+.form-name-image-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* name  */
+.form-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  height: 5.6rem;
+  max-width: 100%;
+  max-height: 100%;
+  /* margin-right:2.5rem ; */
+}
+
+.form-name label {
+  margin-bottom: 0.5rem; /* Añade un margen inferior al label */
+}
+
+.form-name input {
+  /* width: 70%;
+  width: 32.4%; 
+  border-radius: 1rem;
+  padding: 0.5rem; */
+  width: 100%; /* Opcional: Ajusta el ancho del input al 100% */
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem; 
+  width: 16rem;
+}
+
+.form-name span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  font-size: small;
+  text-align: center;
+}
+
+/* image */
+
+.form-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  height: 5.6rem;
+  max-width: 100%;
+  max-height: 100%;
+  /* margin-left: 1.5rem; */
+}
+
+.form-image span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  font-size: small;
+  text-align: center;
+}
+
+.form-image label {
+  margin-bottom: 0.5rem; /* Añade un margen inferior al label */
+}
+
+.form-image input {
+  width: 100%; /* Opcional: Ajusta el ancho del input al 100% */
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem; 
+  width: 15rem;
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.form-inputs-file{
+  cursor: pointer;
+  border: 0.1rem solid white;
+  margin-left: 4rem;
+  background-color: #200b3d;
+
+}
+
+.form-inputs-file:hover{
+  background-color: #200b3d;
+  border: 0.1rem solid #7317f3;
+  box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
+
+}
+
+/* Platforms */
+
+.form-platforms{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  gap: 1rem 1rem 0 1rem;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 16.9%;
+  padding-bottom: 1rem;
+  /* margin-top: 0.6rem; */
+}
+.form-platforms span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  /* margin-bottom: 1rem; */
+  font-size: small;
+  text-align: center;
+}
+
+.form-platforms-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+  padding: 0.2rem;
+  margin-bottom: 0;
+}
+
+.form-platforms-div{
+  display: flex;
+  flex-direction: row ; /* Muestra el label y el checkbox en columnas */
+  align-items: center; /* Centra horizontalmente el contenido */
+  text-align: center;
+  padding: 0.1rem 0.3rem;
+  padding-right: 0.4rem;
+  padding-left: 0.1rem;
+  /* border: 1px solid blueviolet; Agrega un borde a cada grupo de plataforma */
+  border-radius: 0.5rem; /* Agrega bordes redondeados */
+  background-color: rebeccapurple;
+  margin: 0.2rem;
+}
+
+.form-platforms-div input{
+  border-radius: 1rem;
+  border: 2px solid white;
+}
+/* Genres */
+
+.form-genres{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  gap: 1rem 1rem 0 1rem;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 16.9%;
+  padding-bottom: 1rem;
+  margin-top: 0.6rem;
+}
+.form-genres span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  /* margin-bottom: 1rem; */
+  font-size: small;
+  text-align: center;
+}
+
+.form-genres-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+  padding: 0.2rem;
+  margin-bottom: 0;
+}
+
+.form-genres-div{
+  display: flex;
+  flex-direction: row ; /* Muestra el label y el checkbox en columnas */
+  align-items: center; /* Centra horizontalmente el contenido */
+  text-align: center;
+  padding: 0.1rem 0.3rem;
+  padding-right: 0.4rem;
+  padding-left: 0.1rem;
+  /* border: 1px solid blueviolet; Agrega un borde a cada grupo de plataforma */
+  border-radius: 0.5rem; /* Agrega bordes redondeados */
+  background-color: rebeccapurple;
+  margin: 0.2rem;
+}
+
+.form-genres-div input{
+  border-radius: 1rem;
+  border: 2px solid white;
+}
+
+/* rating-released container */
+
+.form-rating-released-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: red; */
+  padding-bottom: 0.1rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Rating */
+
+.form-rating{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  height: 5rem;
+  width: 20rem;
+}
+
+.form-rating span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  font-size: small;
+  text-align: center;
+}
+
+.form-rating label{
+  margin-bottom: 0.5rem;
+}
+
+.form-rating input{
+  width: 70%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/* Released */
+
+.form-released{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  /* background-color: yellow; */
+  padding-bottom: 0.1rem;
+  height: 6rem;
+  width: 20rem;
+
+}
+.form-released span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  font-size: small;
+  text-align: center;
+  margin-top: 0.2rem;
+  /* max-width: fit-content; */
+}
+
+
+.form-released label{
+  margin-bottom: 0.5rem;
+}
+
+.form-released input{
+  /* width: 85.5%; */
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #7717ff;
+  margin-bottom: 0.2rem;
+}
+
+/* Description */
+
+.form-description{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.form-description span{
+  background-color: rgb(48, 12, 12);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  font-size: small;
+  text-align: center;
+}
+
+
+.form-description label{
+  margin-bottom: 0.5rem;
+}
+
+.form-description textarea{
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 0.2rem solid #7717ff;
+  border: 0.2rem solid #320f63;
+  resize: none;
+}
+
+/* Errors */
+
+.error {
+  border: 0.2rem solid rgba(255, 29, 29, 0.836);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+}
+
+/* Success */
+
+.success {
+  border: 0.2rem solid rgba(40, 231, 40, 0.856);
+  box-shadow: 0px 0px 8px 2px rgba(92, 201, 20, 0.5);
+}
+
+.form-button{
+  border:1px solid #320f63;
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.form-button button{
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom, #120020, rgba(31, 10, 10, 0.473));
+  box-shadow: 0px 0px 8px 2px rgba(159, 74, 228, 0.5);
+  border: 0.2rem solid #7d4ec0;
+  background-color: #120020;
+  color: white;
+  padding:1.5rem 2rem;
+  border-radius: 1rem;
+}
+
+/* 
+// const handleChangeForm = (event) =>{
+  //   //? 2 Separo la propiedad en la que estoy y el valor que le agrego
+  //   // const property = event.target.name;
+  //   // const value = event.target.value;
+
+  //   //? Actualizar el estado form según la propiedad
+  //   const { name, value, type, checked } = event.target;
+
+  //   if (type === "checkbox") {
+  //     const options = form[name];
+  //     let updatedOptions;
+  
+  //     if (checked) {
+  //       updatedOptions = [...options, value];
+  //     } else {
+  //       updatedOptions = options.filter((item) => item !== value);
+  //     }
+  
+  //     setForm({ ...form, [name]: updatedOptions });
+  //   } else if (type === "number") {
+  //     const ratingValue = parseInt(value);
+  //     setForm({ ...form, [name]: ratingValue });
+  //   } else {
+  //     setForm({ ...form, [name]: value });
+  //   }
+
+  // // ? --------------
+  //   // setForm({...form,[property]:value}); //  Lo que ya tiene form y lo que quiero modificar de form, es lo que tengo en property y le quiero dar el valor value
+  //   // // validate(form,errors,setErrors); //Cada vez que ocurra un cambio en el estado, llamemos a validate pasandole form, y setErrors para establecer dichos errores si las props de form no cumplen con las condiciones, sin embargo, estaría pasando el  estado viejo
+  //   // // // Estado actualizado:
+  //   // validate({...form,[property]:value},errors,setErrors); //Cada vez que ocurra un cambio en el estado, llamemos a validate pasandole form, y setErrors para establecer dichos errores si las props de form no cumplen con las condiciones
+  //   validate({ ...form, [name]: value }, errors, setErrors);
+  // } */

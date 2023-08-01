@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './ModalDeleteConfirmation.jsx'
+import style from './ModalDeleteConfirmation.module.css'
 
 const ModalDeleteConfirmation = () => {
 

@@ -16,7 +16,7 @@ const Card = (props) => {
         <img src={image} alt={name} />
       </div>
       <div className={style['card-content']}>
-        <h2 className={style['card-subtitle']}>Genres:</h2>
+        <h2 className={style['card-subtitle']}>Genres</h2>
         <div className={style['card-elements']}>
           {genres && genres.map((genre, index) => <p key={index}>{genre}</p>)}
         </div>

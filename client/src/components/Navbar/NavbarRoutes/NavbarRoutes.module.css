@@ -1,0 +1,36 @@
+.nav-routes{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(44, 0, 6, 0.4);
+  /* width: 55%; */
+  /* border-radius: 1rem; */
+  border: 0.2rem solid #7a0000;
+  border-radius: 0.5rem;
+  /* box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5); */
+  /* text-shadow: 0px 0px 0.5px rgba(228, 74, 95, 0.418); */
+}
+
+.nav-routes h3{
+  text-decoration: none;
+  border: 2px solid var(--ros);
+  border-radius: 1.6rem;
+  /* width: 100%; */
+  width: 90%;
+  /* max-width: 50%; */
+  color:var(--ros);
+  box-shadow: 0px 0px 8px 2px rgba(228, 74, 95, 0.5);
+  text-shadow: 0px 0px 0.5px rgba(228, 74, 95, 0.418);
+  text-align: center;
+}
+
+.nav-routes h3:hover{
+  color: #FFF;
+}
+
+.active {
+  background-color: rgb(0, 0, 0);
+  background-image: linear-gradient(to top, #7a0000, rgb(0, 0, 0));
+  color: white !important;
+  border-color: #b40000 !important;
+  /* border: 2rem solid #da0f2a; */
+}

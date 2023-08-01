@@ -9,4 +9,11 @@
   height: 100%;
   justify-items: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
+  background-color: rgba(206, 4, 4, 0.45);
+  background-image: url('../../image//6272395.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: contain;
+  /* background-color: #FFF; */
 }

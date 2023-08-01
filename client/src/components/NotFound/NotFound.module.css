@@ -1,0 +1,7 @@
+.container{
+  padding: 8.4rem;
+  background-image: url('../../image/notFound.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
