@@ -5,9 +5,7 @@ export const validateName = (form,errors,setErrors) => {
     setErrors({...errors,name: "El nombre no puede estar conformado por espacios"})
   } else if(form.name.length < 5){
     setErrors({...errors,name:"El nombre debe tener al menos 5 caracteres"})
-  } else if( !/^([^0-9]*[0-9]){0,2}[^0-9]*$/.test(form.name.trim())){
-    setErrors({...errors,name:"El nombre no puede tener más de 2 números"})
-  } else if(!/^[A-Za-z0-9:-\s]+$/.test(form.name)){
+  }  else if(!/^[A-Za-z0-9:-\s]+$/.test(form.name)){
     setErrors({...errors,name: "El nombre no puede contener un símbolo"})
   } else{
     setErrors({...errors,name:""})
