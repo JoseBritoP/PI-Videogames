@@ -53,9 +53,9 @@ const SearchBarComponent = (props) => {
     <div className={style['searchbar-container']}>
       <img src={searchIcon} alt='search'/>
       <input type="text" value={inputValue} placeholder="God of War, Tomb Raider..." onChange={handleSearchInput} />
-      <button onClick={handleSearchSubmit} disabled={searchDisabled}>Search</button>
-        {hasSearch && <button onClick={handleClearSearch}>Clear</button>}
-    </div>
+      {searchDisabled ? null : <button onClick={handleSearchSubmit}>Search</button>}
+      {hasSearch && <button onClick={handleClearSearch}>Clear</button>}
+  </div>
   )
 }
 
