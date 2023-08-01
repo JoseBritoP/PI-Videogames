@@ -1,6 +1,6 @@
 // Actions-types:
 
-import {GET_ALL_VIDEOGAMES, CLEAN_VIDEOGAMES,GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER, FILTER_BY_GENRES,FILTER_BY_ORIGIN,DELETE_BY_ID} from './actions-types'
+import {GET_ALL_VIDEOGAMES, CLEAN_VIDEOGAMES,GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER, FILTER_BY_GENRES,FILTER_BY_ORIGIN,DELETE_BY_ID,UPDATE_VIDEOGAME} from './actions-types'
 
 // state:
 
@@ -31,6 +31,8 @@ const rootReducer = (state = initialState, action) => {
     //! VideogameById
     case GET_VIDEOGAME_DETAIL: return {...state,videogameDetail: action.payload};
     case CLEAN_VIDEOGAME_DETAIL: return {...state,videogameDetail:{}};
+    //! PUT
+    case UPDATE_VIDEOGAME: return {...state,videogames: action.payload,videogamesAux: action.payload,allVideogames: action.payload,videogamesFilterAux:action.payload,videogamesFilter:action.payload}
     //! DELETE BY ID
     case DELETE_BY_ID:
 

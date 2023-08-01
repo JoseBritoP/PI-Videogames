@@ -1,4 +1,4 @@
-import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTER_BY_GENRES,FILTER_BY_ORIGIN,FILTER_BY_RELEASED,DELETE_BY_ID} from './actions-types'
+import {GET_ALL_VIDEOGAMES,CLEAN_VIDEOGAMES, GET_VIDEOGAME_DETAIL, CLEAN_VIDEOGAME_DETAIL, GET_ALL_GENRES, GET_ALL_PLATFORMS, GET_VIDEOGAMES_BY_NAME,ORDER,FILTER_BY_GENRES,FILTER_BY_ORIGIN,FILTER_BY_RELEASED,DELETE_BY_ID,UPDATE_VIDEOGAME} from './actions-types'
 import axios from 'axios';
 
 export const getAllVideogames = () => {
@@ -92,6 +92,25 @@ export const postVideogame = (form) => {
       alert(`Your videogamecard has been created successfully`)
     } catch (error) {
       // alert('hubo un error')
+      alert(`${error.response.data.error}`)
+    }
+  }
+};
+
+export const putVideogame = (form) => {
+  return async function (dispatch){
+    try {
+      const response = await axios.put(`http://localhost:3001/videogames`,form);
+      const updatedVideogame = response.data;
+
+      axios.get(`http://localhost:3001/videogames`)
+      .then((response)=>{
+        const updateVideogame = response.data;
+
+        dispatch(getAllVideogames(updateVideogame))
+      })
+      alert(`Your videogamecard has been updated successfully!`);
+    } catch (error) {
       alert(`${error.response.data.error}`)
     }
   }
